@@ -1,0 +1,914 @@
+<!doctype html>
+<html lang="es">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WAKE SOLUTIONS | Soluciones Tecnológicas Empresariales</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&amp;family=Montserrat:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #333333;
+            --accent: #adfcdc;
+            --secondary: #e4f1ff;
+            --text: #333333;
+            --light-text: #8f8f8f;
+            --white: #ffffff;
+            --dark-bg: #f8f9fa;
+        }
+
+        html, body {
+            height: 100%;
+            width: 100%;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: var(--white);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* HEADER & NAVIGATION */
+        header {
+            background: var(--white);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--primary);
+    letter-spacing: -0.5px;
+}
+
+.logo img {
+    height: 45px;
+    width: auto;
+}
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        nav a {
+            margin-left: 30px;
+            text-decoration: none;
+            color: var(--text);
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background: linear-gradient(135deg, #ffffff 0%, var(--secondary) 100%);
+            padding: 100px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+            opacity: 0.1;
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 56px;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 24px;
+            color: var(--light-text);
+            margin-bottom: 40px;
+            line-height: 1.8;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 14px 32px;
+            border: none;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: #1a1a1a;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(51, 51, 51, 0.2);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        /* ABOUT SECTION */
+        .about {
+    padding: 120px 20px; /* Un poco más de espacio para que se luzca el fondo */
+    background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), 
+                url(https://lh3.googleusercontent.com/d/18u2eeRx6lo4hbFExQbNKIPBydwkmYsvT);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Esto crea un efecto tipo parallax elegante */
+}
+
+        .about-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 40px;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .about-text {
+            font-size: 16px;
+            color: var(--light-text);
+            line-height: 1.9;
+            text-align: justify;
+        }
+
+        .about-text p {
+            margin-bottom: 18px;
+        }
+
+        /* SERVICES SECTION */
+        .services {
+            padding: 80px 20px;
+            background: var(--dark-bg);
+        }
+
+        .services-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(51, 51, 51, 0.15);
+            border-left-color: var(--accent);
+        }
+
+        .service-icon {
+            font-size: 32px;
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            font-size: 14px;
+            color: var(--light-text);
+            line-height: 1.8;
+        }
+
+        /* CASES SECTION */
+        .cases {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #ffffff 0%, var(--secondary) 100%);
+        }
+
+        .cases-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .cases-intro {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .cases-intro p {
+            font-size: 16px;
+            color: var(--light-text);
+            max-width: 600px;
+            margin: 20px auto 0;
+        }
+
+        .clients-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+            align-items: center;
+        }
+
+        .client-logo {
+    text-align: center;
+    padding: 20px;
+    background: var(--white);
+    border-radius: 10px;
+    transition: all 0.3s ease-out; /* Transición suave */
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(0); /* Estado inicial */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombra inicial para dar profundidad */
+}
+
+.client-logo:hover {
+    transform: translateY(-10px) scale(1.05); /* Efecto de flotado y agrandamiento */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); /* Sombra más intensa cuando se pasa el mouse */
+}
+
+.client-logo img {
+    max-height: 80px;
+    max-width: 90%;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease, transform 0.3s ease; /* Transición suave para efectos */
+}
+
+.client-logo:hover img {
+    filter: grayscale(0%); /* Se quita el filtro en hover */
+    transform: scale(1.1); /* Efecto de agrandar la imagen */
+}
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .result-item {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        .result-item::before {
+            content: '✓';
+            font-size: 32px;
+            color: var(--accent);
+            display: block;
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+
+        .result-item p {
+            font-size: 15px;
+            color: var(--text);
+            font-weight: 600;
+            line-height: 1.6;
+        }
+
+        /* PRICING SECTION */
+        .pricing {
+            padding: 80px 20px;
+            background: var(--white);
+        }
+
+        .pricing-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .pricing-card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 12px;
+            border: 2px solid #e0e0e0;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+        }
+        /* Efecto de elevación al pasar el mouse */
+.pricing-card:hover {
+    transform: translateY(-15px); /* Se eleva 15 píxeles */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); /* Sombra más grande al "subir" */
+    border-color: var(--accent); /* El borde se ilumina con tu color de marca */
+}
+
+/* Ajuste para la tarjeta popular (para que no pierda su escala especial) */
+.pricing-card.popular:hover {
+    transform: scale(1.05) translateY(-15px);
+}
+
+.pricing-card:hover .btn-primary {
+    transform: scale(1.02);
+    filter: brightness(1.1);
+}
+
+        .pricing-card.popular {
+            border-color: var(--accent);
+            transform: scale(1.05);
+            box-shadow: 0 10px 40px rgba(173, 252, 220, 0.2);
+        }
+
+        .pricing-card.popular::before {
+            content: 'MÁS POPULAR';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent);
+            color: var(--primary);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .pricing-card h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .pricing-card .description {
+            font-size: 13px;
+            color: var(--light-text);
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .pricing-price {
+            font-family: 'Poppins', sans-serif;
+            font-size: 36px;
+            font-weight: 800;
+            color: #333333;
+            margin-bottom: 5px;
+        }
+
+        .pricing-price .period {
+            font-size: 14px;
+            color: var(--light-text);
+            font-weight: 500;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin: 30px 0;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .pricing-features li {
+            font-size: 14px;
+            color: var(--text);
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .pricing-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: 800;
+        }
+
+        .pricing-card .btn {
+            width: 100%;
+            text-align: center;
+        }
+
+        /* CONTACT SECTION */
+        .contact {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, var(--primary) 0%, #1a1a1a 100%);
+            color: var(--white);
+        }
+
+        .contact-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .contact h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 40px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 15px;
+            color: var(--white);
+        }
+
+        .contact-intro {
+            text-align: center;
+            font-size: 16px;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--white);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: none;
+            border-radius: 8px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            background: rgba(255,255,255,0.95);
+            color: var(--primary);
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            background: var(--white);
+            box-shadow: 0 0 0 3px rgba(173, 252, 220, 0.2);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .contact .btn-primary {
+            width: 100%;
+            background: var(--accent);
+            color: var(--primary);
+            font-weight: 700;
+            margin-top: 10px;
+        }
+
+        .contact .btn-primary:hover {
+            background: #85e8b5;
+            transform: translateY(-2px);
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--primary);
+            color: var(--white);
+            padding: 50px 20px;
+            text-align: center;
+            border-top: 4px solid var(--accent);
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-family: 'Poppins', sans-serif;
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .footer-logo span {
+            color: var(--accent);
+        }
+
+        .footer-tagline {
+            font-size: 14px;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 25px;
+        }
+
+        .footer-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding: 30px 0;
+        }
+
+        .footer-info div {
+            font-size: 14px;
+        }
+
+        .footer-info strong {
+            display: block;
+            color: var(--accent);
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+
+        .social-links {
+            margin-top: 25px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-links a {
+            color: var(--white);
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent);
+        }
+
+        .footer-bottom {
+            font-size: 12px;
+            color: rgba(255,255,255,0.6);
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .pricing-card.popular {
+                transform: scale(1);
+            }
+
+            nav {
+                display: none;
+            }
+
+            nav a {
+                margin-left: 0;
+            }
+
+            .clients-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+        }
+
+        /* ANIMATIONS */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .service-card {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        .service-card:nth-child(1) { animation-delay: 0.1s; }
+        .service-card:nth-child(2) { animation-delay: 0.2s; }
+        .service-card:nth-child(3) { animation-delay: 0.3s; }
+        .service-card:nth-child(4) { animation-delay: 0.4s; }
+        .service-card:nth-child(5) { animation-delay: 0.5s; }
+    </style>
+  <style>body { box-sizing: border-box; }</style>
+  <script src="https://cdn.tailwindcss.com/3.4.17" type="text/javascript"></script>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="/_sdk/element_sdk.js" type="text/javascript"></script>
+ </head>
+ <body><!-- HEADER -->
+  <header>
+   <div class="header-container">
+    <div class="logo">
+        <img src="https://lh3.googleusercontent.com/d/1Bkvz0VkWBsWgZIh6ewkMzUFqVQfj3FOQ" alt="WAKE Solutions Logo">
+        </div>
+    <nav><a href="#hero">Inicio</a> <a href="#about">Nosotros</a> <a href="#services">Servicios</a> <a href="#cases">Casos de Éxito</a> <a href="#pricing">Precios</a> <a href="#contact">Contacto</a>
+    </nav>
+   </div>
+  </header><!-- HERO SECTION -->
+  <section id="hero" class="hero">
+   <div class="hero-content">
+    <h1>Digitaliza, Optimiza &amp; Crece</h1>
+    <p>En <b>WAKE SOLUTIONS</b> ayudamos a empresas a digitalizar, optimizar y crecer sus operaciones mediante <b>soluciones tecnológicas</b> empresariales diseñadas para generar <b>orden, control y crecimiento sostenible</b>.</p>
+    <div class="hero-buttons"><button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">SOLICITAR UN DEMO</button> <button class="btn btn-secondary" onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'})">Conocer servicios</button>
+    </div>
+   </div>
+  </section><!-- ABOUT SECTION -->
+  <section id="about" class="about">
+   <div class="about-container">
+    <h2 class="section-title">Somos WAKE SOLUTIONS</h2>
+    <div class="about-text">
+     <p><b>WAKE SOLUTIONS</b> es una empresa de tecnológica orientada al <B>desarrollo, implementación y escalamiento</B> de soluciones digitales empresariales.</p>
+     <p>Nos enfocamos inicialmente en la <b>sistematización y optimización</b> de pequeños y medianos comercios en Honduras y Centroamérica.</p>
+     <p>Nuestra visión es ir más allá de ofrecer software. Buscamos convertirnos en un <b>aliado estratégico de infraestructura tecnológica empresarial</b>, ayudando a las empresas a operar con <b>orden, control, trazabilidad y eficiencia operativa.</B></p>
+     <p>Trabajamos con un <B>enfoque estructurado</B>, premium y orientado a resultados medibles, priorizando la rentabilidad, la escalabilidad y la expansión de nuestros clientes.</p>
+    </div>
+   </div>
+  </section><!-- SERVICES SECTION -->
+  <section id="services" class="services">
+   <div class="services-container">
+    <h2 class="section-title">Nuestros Servicios</h2>
+    <div class="services-grid">
+     <div class="service-card">
+      <div class="service-icon"><i class="fas fa-cogs"></i>
+      </div>
+      <h3>Sistematización de negocios</h3>
+      <p>Implementamos sistemas que permiten controlar ventas, inventarios, finanzas y operaciones en un solo lugar.</p>
+     </div>
+     <div class="service-card">
+      <div class="service-icon"><i class="fas fa-tools"></i>
+      </div>
+      <h3>Implementación de soluciones</h3>
+      <p>Diseñamos e implementamos sistemas empresariales adaptados a las necesidades específicas de cada negocio.</p>
+     </div>
+     <div class="service-card">
+      <div class="service-icon"><i class="fas fa-bolt"></i>
+      </div>
+      <h3>Automatización de procesos</h3>
+      <p>Optimizamos procesos internos para reducir errores, ahorrar tiempo y mejorar la productividad.</p>
+     </div>
+     <div class="service-card">
+      <div class="service-icon"><i class="fas fa-network-wired"></i>
+      </div>
+      <h3>Infraestructura tecnológica empresarial</h3>
+      <p>Ayudamos a las empresas a construir una base tecnológica sólida para soportar su crecimiento.</p>
+     </div>
+     <div class="service-card">
+      <div class="service-icon"><i class="fas fa-chart-line"></i>
+      </div>
+      <h3>Consultoría tecnológica</h3>
+      <p>Analizamos el estado actual de la empresa y diseñamos estrategias digitales para mejorar la eficiencia y el crecimiento.</p>
+     </div>
+    </div>
+   </div>
+  </section><!-- CASES SECTION -->
+  <section id="cases" class="cases">
+   <div class="cases-container">
+    <div class="cases-intro">
+     <h2 class="section-title">Resultados Reales</h2>
+     <p>Empresas que han trabajado con WAKE SOLUTIONS han logrado mejorar significativamente su control operativo y su eficiencia empresarial.</p>
+    </div>
+    <div class="clients-grid">
+     <div class="client-logo"><img src="https://lh3.googleusercontent.com/d/1ZwSVPhyS1dJcbxYjlJH8PfO0Q9sc64NB" alt="Cliente 1" loading="lazy" onerror="console.error('Image failed:', this.src); this.style.background='#f0f0f0'; this.alt='Logo cliente';">
+     </div>
+     <div class="client-logo"><img src="https://lh3.googleusercontent.com/d/1dFJNLP-3p855R1hCtLvAnAEDIBlzuPEr" alt="Cliente 2" loading="lazy" onerror="console.error('Image failed:', this.src); this.style.background='#f0f0f0'; this.alt='Logo cliente';">
+     </div>
+     <div class="client-logo"><img src="https://lh3.googleusercontent.com/d/18bvpl-104yGuCtGxQ-3w_XzOX-Vk576p" alt="Cliente 3" loading="lazy" onerror="console.error('Image failed:', this.src); this.style.background='#f0f0f0'; this.alt='Logo cliente';">
+     </div>
+     <div class="client-logo"><img src="https://lh3.googleusercontent.com/d/1S3byR29fdjwN_VtF8eecd5NhSGk5oCMY" alt="Cliente 4" loading="lazy" onerror="console.error('Image failed:', this.src); this.style.background='#f0f0f0'; this.alt='Logo cliente';">
+     </div>
+     <div class="client-logo"><img src="https://lh3.googleusercontent.com/d/1-Ioj0XeJoDFmjQpkEftAVIgM81WknWe0" alt="Cliente 5" loading="lazy" onerror="console.error('Image failed:', this.src); this.style.background='#f0f0f0'; this.alt='Logo cliente';">
+     </div>
+    </div>
+    <div class="results-grid">
+     <div class="result-item">
+      <p>Negocios que redujeron errores operativos en más del 50%</p>
+     </div>
+     <div class="result-item">
+      <p>Empresas que ahora tienen control completo de inventarios y ventas</p>
+     </div>
+     <div class="result-item">
+      <p>Procesos administrativos automatizados</p>
+     </div>
+     <div class="result-item">
+      <p>Mayor claridad financiera y toma de decisiones basada en datos</p>
+     </div>
+    </div>
+   </div>
+  </section><!-- PRICING SECTION -->
+  <section id="pricing" class="pricing">
+   <div class="pricing-container">
+    <h2 class="section-title">Planes de Soluciones</h2>
+    <div class="pricing-grid"><!-- Plan Estandar -->
+     <div class="pricing-card">
+      <h3>Estándar</h3>
+      <p class="description">Ideal para pequeños negocios que quieren comenzar a digitalizar su operación.</p>
+      <div class="pricing-price">
+       L. 849<span class="period">/mes</span>
+      </div>
+      <ul class="pricing-features">
+       <li>Facturación</li>
+       <li>Inventario</li>
+       <li>5 usuarios</li>
+       <li>CRM (Clientes)</li>
+      </ul><button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Solicitar Demo</button>
+     </div><!-- Plan Plus (Popular) -->
+     <div class="pricing-card popular">
+      <h3>Plus</h3>
+      <p class="description">Perfecto para empresas que buscan optimizar procesos y tener control completo de su operación.</p>
+      <div class="pricing-price">
+       L. 1,499<span class="period">/mes</span>
+      </div>
+      <ul class="pricing-features">
+       <li>Todo lo anterior</li>
+       <li>Contabilidad</li>
+       <li>Compras</li>
+       <li>Catálogo web</li>
+       <li>10 usuarios</li>
+      </ul><button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Solicitar Demo</button>
+     </div><!-- Plan Empresa -->
+     <div class="pricing-card">
+      <h3>Empresa</h3>
+      <p class="description">Diseñado para empresas consolidadas o equipos de expansión.</p>
+      <div class="pricing-price">
+       L. 3,199<span class="period">/mes</span>
+      </div>
+      <ul class="pricing-features">
+       <li>Todo lo anterior</li>
+       <li>15 usuarios</li>
+       <li>RRHH</li>
+       <li>Nómina</li>
+       <li>Proyectos</li>
+       <li>Soporte preferencial</li>
+      </ul><button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Contactar Ventas</button>
+     </div>
+    </div>
+   </div>
+  </section><!-- CONTACT SECTION -->
+  <section id="contact" class="contact">
+   <div class="contact-container">
+    <h2>Hablemos de tu negocio</h2>
+    <p class="contact-intro">Si quieres digitalizar, optimizar y escalar tu empresa con tecnología, nuestro equipo está listo para ayudarte.</p>
+    <form id="contactForm" onsubmit="handleSubmit(event)">
+     <div class="form-group"><label for="name">Nombre *</label> <input type="text" id="name" name="name" required>
+     </div>
+     <div class="form-group"><label for="company">Empresa</label> <input type="text" id="company" name="company">
+     </div>
+     <div class="form-group"><label for="email">Email *</label> <input type="email" id="email" name="email" required>
+     </div>
+     <div class="form-group"><label for="phone">Teléfono</label> <input type="tel" id="phone" name="phone">
+     </div>
+     <div class="form-group"><label for="message">Mensaje</label> <textarea id="message" name="message"></textarea>
+     </div><button type="submit" class="btn btn-primary">Contáctanos</button>
+    </form>
+   </div>
+  </section><!-- FOOTER -->
+  <footer>
+   <div class="footer-container">
+    <div class="footer-logo">
+     WAKE<span>.</span>
+    </div>
+    <p class="footer-tagline">Digitaliza, Optimiza & Crece</p>
+    <div class="footer-info">
+     <div><strong>Ubicación</strong> Honduras
+     </div>
+     <div><strong>Email</strong> <a href="mailto:ventas@wake.solution" style="color: rgba(255,255,255,0.8); text-decoration: none;">ventas@wake.solution</a>
+     </div>
+     <div><strong>Síguenos</strong>
+      <div class="social-links"><a href="#" title="Facebook"><i class="fab fa-facebook"></i></a> <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a> <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+     </div>
+    </div>
+    <div class="footer-bottom">
+     © 2024 WAKE SOLUTIONS. Todos los derechos reservados.
+    </div>
+   </div>
+  </footer>
+  <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const company = document.getElementById('company').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const message = document.getElementById('message').value;
+            
+            // Crear mailto con los datos del formulario
+            const mailtoLink = `mailto:ventas@wake.solution?subject=Solicitud de Demo - ${name}&body=Nombre: ${name}%0AEmpresa: ${company}%0AEmail: ${email}%0ATelefono: ${phone}%0A%0AMensaje:%0A${message}`;
+            
+            window.open(mailtoLink);
+            
+            // Resetear formulario
+            document.getElementById('contactForm').reset();
+        }
+
+        // Smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({behavior: 'smooth'});
+                }
+            });
+        });
+    </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9dae1068220b5c71',t:'MTc3MzI2ODg2MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
