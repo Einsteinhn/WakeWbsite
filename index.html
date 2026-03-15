@@ -911,5 +911,200 @@
             });
         });
     </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9dae1068220b5c71',t:'MTc3MzI2ODg2MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9dae1068220b5c71',t:'MTc3MzI2ODg2MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+
+  <!-- ENLACES DE MODAL EN FOOTER -->
+<div style="position: fixed; bottom: 20px; left: 20px; z-index: 2000; font-size: 14px;">
+    <a href="#" id="privacyLink" style="color: var(--white); margin-right: 15px; text-decoration: underline; cursor: pointer;">Políticas de Privacidad</a>
+    <a href="#" id="termsLink" style="color: var(--white); text-decoration: underline; cursor: pointer;">Términos y Condiciones</a>
+</div>
+
+<!-- MODAL -->
+<div id="modalOverlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.6); z-index: 3000; overflow-y: auto;">
+    <div style="
+        background: linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.95)), 
+                    url('https://lh3.googleusercontent.com/d/18u2eeRx6lo4hbFExQbNKIPBydwkmYsvT') center/cover no-repeat;
+        max-width: 900px;
+        margin: 50px auto;
+        padding: 40px;
+        border-radius: 12px;
+        position: relative;
+        font-family: 'Montserrat', sans-serif;
+        color: var(--text);
+    ">
+        <button id="closeModal" style="position:absolute; top:15px; right:20px; font-size:22px; border:none; background:none; cursor:pointer;">✖</button>
+        <div id="modalContent" style="max-height: 80vh; overflow-y: auto; line-height: 1.6; font-size: 14px;">
+            <!-- Contenido cargado por JS -->
+        </div>
+    </div>
+</div>
+
+<script>
+    const modalOverlay = document.getElementById('modalOverlay');
+    const modalContent = document.getElementById('modalContent');
+    const closeModal = document.getElementById('closeModal');
+
+    const privacyText = `
+        <h2>Política de Privacidad – WAKE SOLUTIONS</h2>
+        <p><strong>Versión 1.0 – Última actualización: Marzo 2026</strong></p>
+
+        <h3>1. Introducción</h3>
+        <p>En <strong>Wake Solutions – Wake S. de R. L.</strong>, valoramos su privacidad y nos comprometemos a proteger la información personal y empresarial que usted nos proporciona al usar nuestro software <strong>Wake ERP</strong>. Esta política explica cómo recopilamos, usamos y protegemos la información de los usuarios, cumpliendo con las leyes de privacidad y protección de datos vigentes en Honduras y otras jurisdicciones aplicables.</p>
+
+        <h3>2. Información Recopilada</h3>
+        <ul>
+            <li>Nombre, correo electrónico y teléfono de contacto.</li>
+            <li>Información de su empresa (razón social, dirección, rubro).</li>
+            <li>Información financiera necesaria para facturación y suscripciones (datos de pago procesados por Pixel Pay o plataformas equivalentes).</li>
+            <li>Datos operativos generados dentro del software (transacciones, inventarios, contabilidad, reportes).</li>
+            <li>Documentación de temática fiscal para implementar en los servicios solicitados por su empresa (Factura, número CAI, RTN/NIF u otros).</li>
+        </ul>
+        <p>La información recopilada se utiliza exclusivamente para proporcionar y mejorar nuestros servicios.</p>
+
+        <h3>3. Uso de la Información</h3>
+        <ul>
+            <li>Brindar acceso y soporte a Wake ERP.</li>
+            <li>Facturación y gestión de suscripciones.</li>
+            <li>Mejorar la funcionalidad del software y la experiencia del usuario.</li>
+            <li>Comunicaciones relacionadas con actualizaciones del software, soporte técnico o avisos importantes sobre el servicio.</li>
+        </ul>
+
+        <h3>4. Protección de Datos</h3>
+        <ul>
+            <li>Acceso no autorizado</li>
+            <li>Divulgación</li>
+            <li>Alteración</li>
+            <li>Pérdida o destrucción</li>
+        </ul>
+        <p>Entre las medidas utilizadas están: encriptación de datos, firewalls, autenticación segura y control de accesos internos.</p>
+
+        <h3>5. Compartir Información</h3>
+        <p>No vendemos, alquilamos ni compartimos su información personal o empresarial con terceros, excepto cuando sea necesario para:</p>
+        <ul>
+            <li>Cumplir con obligaciones legales.</li>
+            <li>Proteger nuestros derechos y propiedad intelectual.</li>
+            <li>Proporcionar servicios esenciales de terceros que soporten el funcionamiento de Wake ERP (por ejemplo, plataformas de pago como Pixel Pay).</li>
+        </ul>
+
+        <h3>6. Cookies y Tecnologías Similares</h3>
+        <p>Wake ERP puede utilizar cookies y tecnologías similares para mejorar la experiencia del usuario, analizar el uso de la plataforma y personalizar contenidos y comunicaciones.</p>
+
+        <h3>7. Derechos del Usuario</h3>
+        <p>Usted tiene derecho a:</p>
+        <ul>
+            <li>Acceder a sus datos personales y empresariales.</li>
+            <li>Solicitar la corrección de datos inexactos.</li>
+            <li>Solicitar la eliminación o restricción del uso de sus datos.</li>
+        </ul>
+        <p>Para ejercer estos derechos o realizar consultas adicionales, contáctenos a través de los medios proporcionados al final de este documento.</p>
+
+        <h3>8. Retención de Datos</h3>
+        <p>Sus datos serán conservados únicamente durante el tiempo necesario para cumplir con los fines para los cuales fueron recopilados, incluyendo la prestación del servicio, obligaciones legales y resolución de disputas.</p>
+
+        <h3>9. Cambios en la Política de Privacidad</h3>
+        <p>Wake Solutions se reserva el derecho de actualizar esta política en cualquier momento. El uso continuado de Wake ERP después de los cambios constituye aceptación de los mismos.</p>
+
+        <h3>10. Contacto y Soporte</h3>
+        <p>Correo electrónico: <a href="mailto:ventas@wake.solutions">ventas@wake.solutions</a></p>
+    `;
+
+    const termsText = `
+        <h2>Términos y Condiciones de Uso del Software WAKE SOLUTIONS</h2>
+        <p><strong>Versión 1.0 – Última actualización: Marzo 2026</strong></p>
+
+        <h3>1. Aceptación de los Términos</h3>
+        <p>Estos Términos y Condiciones de uso constituyen un acuerdo legal entre usted (el "Usuario" o la "Empresa") y <strong>Wake Solutions – Wake S. de R. L.</strong>, con domicilio en Honduras, y regulan el uso de nuestra plataforma de servicios tecnológicos y software empresarial (“Wake ERP” o “el Software”).</p>
+        <p>Al implementar nuestras soluciones tecnológicas, instalar o usar el Software, usted acepta cumplir estos términos y nuestra Política de Privacidad. Si no está de acuerdo con alguno de estos términos, no podrá utilizar nuestras soluciones tecnológicas o el Software.</p>
+
+        <h3>2. Declaración de Capacidad</h3>
+        <ul>
+            <li>Tiene la capacidad legal para celebrar contratos y actuar en nombre de su empresa.</li>
+            <li>Es mayor de edad según la legislación aplicable.</li>
+            <li>No está sujeto a ninguna restricción legal que impida celebrar contratos.</li>
+        </ul>
+        <p>Wake Solutions se reserva el derecho de solicitar documentación que respalde su capacidad legal.</p>
+
+        <h3>3. Licencia de Uso</h3>
+        <p>Wake Solutions otorga al Usuario una licencia limitada, no exclusiva, intransferible y revocable para usar el Software según estos términos.</p>
+        <ul>
+            <li>El Software debe utilizarse únicamente para la gestión empresarial de la empresa del Usuario, incluyendo contabilidad, inventarios, ventas y operaciones compatibles con Wake.</li>
+            <li>Queda prohibido modificar, reproducir, distribuir o comercializar el Software sin autorización.</li>
+            <li>Queda prohibido intentar vulnerar la seguridad del Software o acceder a funcionalidades no autorizadas.</li>
+        </ul>
+
+        <h3>4. Responsabilidades del Usuario</h3>
+        <ul>
+            <li>Mantener la confidencialidad de sus credenciales de acceso.</li>
+            <li>Proporcionar información veraz y completa al registrarse.</li>
+            <li>No usar el Software para fines ilegales, fraudulentos o no autorizados.</li>
+        </ul>
+        <p>Wake Solutions se reserva el derecho de suspender o cancelar cuentas que incumplan estas obligaciones.</p>
+
+        <h3>5. Demostración del Software</h3>
+        <ul>
+            <li>Wake Solutions ofrece un demo gratuito de 7 días antes de la contratación definitiva.</li>
+            <li>Durante el demo, algunas funcionalidades pueden estar limitadas.</li>
+            <li>La información ingresada durante el demo puede eliminarse posteriormente.</li>
+            <li>El demo permite al Usuario evaluar la solución antes de suscribirse a cualquier plan.</li>
+        </ul>
+
+        <h3>6. Condiciones y Medios de Pago</h3>
+        <p>La contratación del Software se realiza mediante planes de suscripción (mensual o anual). Los pagos se procesarán mediante Pixel Pay u otras plataformas seguras de pago electrónico.</p>
+
+        <h3>7. Reembolsos y Cancelaciones</h3>
+        <ul>
+            <li>No se ofrecen reembolsos por servicios ya prestados.</li>
+            <li>En caso de error en la facturación, el Usuario debe contactarnos para corregir la situación.</li>
+            <li>Las cancelaciones deben realizarse antes de la renovación automática para evitar cargos adicionales.</li>
+            <li>Cualquier pago en exceso puede aplicarse como crédito para futuros servicios.</li>
+        </ul>
+
+        <h3>8. Garantía</h3>
+        <ul>
+            <li>El Software será implementado conforme a las especificaciones acordadas.</li>
+            <li>Se prestará soporte técnico razonable según las condiciones del contrato.</li>
+            <li>No se garantiza que el Software esté libre de interrupciones o errores menores.</li>
+        </ul>
+
+        <h3>9. Modificaciones del Software y de los Términos</h3>
+        <p>Wake Solutions puede modificar o actualizar el Software y estos Términos en cualquier momento. El uso continuado del Software constituye aceptación de dichos cambios.</p>
+
+        <h3>10. Limitación de Responsabilidad</h3>
+        <ul>
+            <li>Wake Solutions no será responsable por pérdidas de datos o interrupciones del servicio fuera de su control.</li>
+            <li>No se hace responsable por daños indirectos, lucro cesante o pérdida de oportunidades.</li>
+            <li>No se hace responsable por uso indebido del Software por parte del Usuario.</li>
+        </ul>
+
+        <h3>11. Ley Aplicable y Jurisdicción</h3>
+        <p>Estos términos se rigen por las leyes de Honduras. Cualquier disputa será sometida a la jurisdicción exclusiva de los tribunales competentes en Honduras.</p>
+
+        <h3>12. Contacto</h3>
+        <p>Correo: <a href="mailto:ventas@wake.solutions">ventas@wake.solutions</a></p>
+    `;
+
+    document.getElementById('privacyLink').addEventListener('click', function(e){
+        e.preventDefault();
+        modalContent.innerHTML = privacyText;
+        modalOverlay.style.display = 'block';
+    });
+
+    document.getElementById('termsLink').addEventListener('click', function(e){
+        e.preventDefault();
+        modalContent.innerHTML = termsText;
+        modalOverlay.style.display = 'block';
+    });
+
+    closeModal.addEventListener('click', function(){
+        modalOverlay.style.display = 'none';
+    });
+
+    modalOverlay.addEventListener('click', function(e){
+        if(e.target === modalOverlay){
+            modalOverlay.style.display = 'none';
+        }
+    });
+</script>
+ 
+ </body>
 </html>
