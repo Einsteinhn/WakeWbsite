@@ -23,6 +23,7 @@
 body{
 font-family:'Montserrat',sans-serif;
 color:var(--text);
+line-height: 1.6;
 }
 
 /* HEADER */
@@ -32,7 +33,7 @@ padding:20px;
 box-shadow:0 2px 10px rgba(0,0,0,0.05);
 position:sticky;
 top:0;
-z-index:10;
+z-index:100;
 }
 
 .container{
@@ -50,6 +51,12 @@ margin-left:20px;
 text-decoration:none;
 color:var(--text);
 font-size:14px;
+font-weight: 600;
+transition: 0.3s;
+}
+
+nav a:hover{
+color: #16c2a3;
 }
 
 /* HERO CON PARALLAX */
@@ -62,7 +69,6 @@ color:white;
 overflow:hidden;
 }
 
-/* overlay oscuro */
 .hero::before{
 content:"";
 position:absolute;
@@ -74,13 +80,11 @@ background:rgba(0,0,0,0.6);
 z-index:0;
 }
 
-/* contenido encima */
 .hero *{
 position:relative;
 z-index:1;
 }
 
-/* TITULO */
 .hero h1{
 font-family:'Poppins';
 font-size:56px;
@@ -89,9 +93,9 @@ margin-bottom:20px;
 line-height:1.2;
 }
 
-/* palabras destacadas */
 .highlight{
 color:#adfcdc; 
+animation:fadeIn 1.2s ease;
 }
 
 .highlight-2{
@@ -100,17 +104,11 @@ padding:5px 10px;
 border-radius:6px;
 }
 
-/* animación */
-.highlight{
-animation:fadeIn 1.2s ease;
-}
-
 @keyframes fadeIn{
 from{opacity:0; transform:translateY(10px);}
 to{opacity:1; transform:translateY(0);}
 }
 
-/* TEXTO HERO */
 .hero p{
 font-size:20px;
 color:#ddd;
@@ -140,6 +138,7 @@ box-shadow:0 10px 25px rgba(173,252,220,0.3);
 
 .btn-primary:hover{
 transform:translateY(-3px);
+background: #8eefc7;
 }
 
 .btn-secondary{
@@ -167,7 +166,7 @@ margin-bottom:40px;
 /* GRID */
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:25px;
 max-width:1100px;
 margin:auto;
@@ -176,7 +175,7 @@ margin:auto;
 .card{
 background:white;
 padding:30px;
-border-radius:10px;
+border-radius:12px;
 box-shadow:0 5px 15px rgba(0,0,0,0.05);
 text-align:center;
 transition:0.3s;
@@ -184,12 +183,97 @@ transition:0.3s;
 
 .card:hover{
 transform:translateY(-8px);
+box-shadow:0 12px 30px rgba(0,0,0,0.1);
 }
 
 .card i{
 font-size:30px;
 color:var(--accent);
 margin-bottom:15px;
+background: #f0fff9;
+width: 60px;
+height: 60px;
+line-height: 60px;
+border-radius: 50%;
+}
+
+/* GALERIA ESPECIFICA */
+.gallery-card {
+    padding: 15px;
+    text-align: left;
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; 
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #eee;
+    transition: 0.4s;
+    cursor: pointer; /* Indica que se puede hacer clic */
+}
+
+.gallery-card:hover img {
+    transform: scale(1.03);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.gallery-card h4 {
+    font-family: 'Poppins';
+    margin-bottom: 5px;
+    color: var(--primary);
+}
+
+.gallery-card p {
+    font-size: 14px;
+    color: var(--light);
+}
+
+/* ESTILOS DEL MODAL (PANTALLA COMPLETA) */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    padding-top: 50px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.85); 
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 85vh;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    animation: zoom 0.3s ease;
+}
+
+@keyframes zoom {
+    from {transform:scale(0.9); opacity:0;}
+    to {transform:scale(1); opacity:1;}
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: var(--accent);
+    text-decoration: none;
 }
 
 /* DARK SECTION */
@@ -212,8 +296,17 @@ footer{
 background:#111;
 color:white;
 text-align:center;
-padding:20px;
+padding:40px 20px;
 font-size:13px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 36px; }
+    .container { flex-direction: column; }
+    nav { margin-top: 20px; }
+    nav a { margin: 0 10px; }
+    .close-modal { top: 10px; right: 20px; }
 }
 </style>
 
@@ -224,20 +317,20 @@ font-size:13px;
 <header>
 <div class="container">
 <div class="logo">
-<img src="https://lh3.googleusercontent.com/d/1Bkvz0VkWBsWgZIh6ewkMzUFqVQfj3FOQ">
+<img src="https://lh3.googleusercontent.com/d/1Bkvz0VkWBsWgZIh6ewkMzUFqVQfj3FOQ" alt="Wake Health Logo">
 </div>
 
 <nav>
-<a href="../index.html">Inicio</a>
+<a href="#">Inicio</a>
 <a href="#problemas">Problemas</a>
 <a href="#modulos">Sistema</a>
+<a href="#galeria">Capturas</a>
 <a href="#contacto">Demo</a>
 </nav>
 </div>
 </header>
 
 <!-- HERO -->
-
 <section class="hero">
 <h1>
 Tu clínica no necesita más 
@@ -250,61 +343,34 @@ Deja atrás el papel, las citas desordenadas y la falta de control.
 Con <b>WAKE HEALTH</b> organizas toda tu clínica en un solo sistema.
 </p>
 
-<a href="https://wa.me/504XXXXXXXX" class="btn btn-primary">Hablar por WhatsApp</a>
+<a href="https://wa.me/50433292869?text=Hola!%20Necesito%20m%C3%A1s%20informaci%C3%B3n%20sobre%20WAKE%20HEALTH!" class="btn btn-primary">Hablar por WhatsApp</a>
 <a href="#modulos" class="btn btn-secondary">Ver sistema</a>
-
 </section>
 
 <!-- PROBLEMAS -->
-
 <section class="section" id="problemas">
-<h2 class="title">Si esto te pasa… necesitas esto</h2>
-
+<h2 class="title">Si esto te pasa… necesitas un cambio</h2>
 <div class="grid">
-
-<div class="card">
-<i class="fas fa-times-circle"></i>
-<p>Se pierden citas o se desordenan los horarios</p>
-</div>
-
-<div class="card">
-<i class="fas fa-times-circle"></i>
-<p>Todo se maneja en papel o Excel</p>
-</div>
-
-<div class="card">
-<i class="fas fa-times-circle"></i>
-<p>No tienes control claro de ingresos</p>
-</div>
-
-<div class="card">
-<i class="fas fa-times-circle"></i>
-<p>El historial de pacientes se pierde o es lento de consultar</p>
-</div>
-
+<div class="card"><i class="fas fa-times-circle"></i><p>Se pierden citas o se desordenan los horarios</p></div>
+<div class="card"><i class="fas fa-times-circle"></i><p>Todo se maneja en papel o Excel</p></div>
+<div class="card"><i class="fas fa-times-circle"></i><p>No tienes control claro de ingresos</p></div>
+<div class="card"><i class="fas fa-times-circle"></i><p>El historial de pacientes es lento de consultar</p></div>
 </div>
 </section>
 
-<!-- SOLUCION -->
-
+<!-- SOLUCION INTERMEDIA -->
 <section class="section dark">
 <h2 class="title">Un sistema. Todo bajo control.</h2>
-<p>
-WAKE HEALTH centraliza pacientes, citas, consultas y finanzas en un solo lugar.
-</p>
-
+<p>WAKE HEALTH centraliza pacientes, citas, consultas y finanzas en un solo lugar.</p>
 <div class="cta">
-<a href="https://wa.me/504XXXXXXXX" class="btn btn-primary">Solicitar Demo</a>
+<a href="https://wa.me/50433292869?text=Hola!%20Necesito%20m%C3%A1s%20informaci%C3%B3n%20sobre%20WAKE%20HEALTH!" class="btn btn-primary">Solicitar Demo</a>
 </div>
 </section>
 
 <!-- MODULOS -->
-
 <section class="section" id="modulos">
-<h2 class="title">Todo lo que tu clínica necesita</h2>
-
+<h2 class="title">Módulos del Sistema</h2>
 <div class="grid">
-
 <div class="card"><i class="fas fa-user"></i><h3>Pacientes</h3></div>
 <div class="card"><i class="fas fa-calendar-check"></i><h3>Citas</h3></div>
 <div class="card"><i class="fas fa-stethoscope"></i><h3>Consulta</h3></div>
@@ -314,24 +380,105 @@ WAKE HEALTH centraliza pacientes, citas, consultas y finanzas en un solo lugar.
 <div class="card"><i class="fas fa-vials"></i><h3>Laboratorio</h3></div>
 <div class="card"><i class="fas fa-pills"></i><h3>Farmacia</h3></div>
 <div class="card"><i class="fas fa-cog"></i><h3>Configuración</h3></div>
-
 </div>
 </section>
 
-<!-- CTA FINAL -->
+<!-- GALERIA DE CAPTURAS -->
+<section class="section" id="galeria" style="background: #fdfdfd; border-top: 1px solid #eee;">
+    <h2 class="title">Explora la Interfaz</h2>
+    <div class="grid">
+        
+        <!-- Captura 1 -->
+        <div class="card gallery-card">
+            <img src="https://pub-f6d32fe4d40f4f899fa753aab8eb28d5.r2.dev/capturaswakehealth/wkhpantallaprincipal.png" alt="Dashboard">
+            <h4>Panel Principal</h4>
+            <p>Visualiza tus métricas, citas del día, recordatorios importantes de un vistazo y todo en un hub personalizable.</p>
+        </div>
 
+        <!-- Captura 2 -->
+        <div class="card gallery-card">
+            <img src="https://pub-f6d32fe4d40f4f899fa753aab8eb28d5.r2.dev/capturaswakehealth/wkhcontroltotal.png" alt="Citas">
+            <h4>Control de Citas</h4>
+            <p>Calendario inteligente para evitar cruces y organizar a tus médicos eficientemente.</p>
+        </div>
+
+        <!-- Captura 3 -->
+        <div class="card gallery-card">
+            <img src="https://pub-f6d32fe4d40f4f899fa753aab8eb28d5.r2.dev/capturaswakehealth/wkhdatos.png" alt="Historial">
+            <h4>Expediente Digital</h4>
+            <p>Accede a diagnósticos previos, recetas y exámenes de laboratorio en segundos. Todo en un módulo profesional diseñado por especialistas.</p>
+        </div>
+
+         <!-- Captura 4 -->
+        <div class="card gallery-card">
+            <img src="https://pub-f6d32fe4d40f4f899fa753aab8eb28d5.r2.dev/capturaswakehealth/wkhatenciondirecta.png" alt="Antención Directa">
+            <h4>Atención Directa</h4>
+            <p>Prioridad máxima cuando cada segundo cuenta. Nuestro botón de atención directa permite saltar procesos burocráticos para atender emergencias al instante.</p>
+        </div>
+
+        <!-- Captura 5 -->
+        <div class="card gallery-card">
+            <img src="https://pub-f6d32fe4d40f4f899fa753aab8eb28d5.r2.dev/capturaswakehealth/wkhoptimizadoconia.png" alt="Diagnosticos inteligentes">
+            <h4>Diagnósticos con IA</h4>
+            <p>Precisión clínica potenciada por Inteligencia Artificial. Optimiza tus diagnósticos con sugerencias basadas en datos, reduciendo el margen de error y agilizando la consulta.</p>
+        </div>
+
+        <!-- Captura 6 -->
+        <div class="card gallery-card">
+            <img src="https://pub-f6d32fe4d40f4f899fa753aab8eb28d5.r2.dev/capturaswakehealth/wkhresponsivo.png" alt="Multidispositivo">
+            <h4>Multidispositivo</h4>
+            <p>Tu clínica en tu bolsillo. Accede a toda la información desde tu celular, tablet o computadora con una interfaz que se adapta perfectamente a cualquier pantalla.</p>
+        </div>
+    </div>
+</section>
+
+<!-- CTA FINAL -->
 <section class="section dark" id="contacto">
 <h2 class="title">Agenda tu demostración</h2>
-<p>Te mostramos cómo funciona en tu propia clínica.</p>
-
+<p>Te mostramos cómo funciona en vivo y resolvemos tus dudas.</p>
 <div class="cta">
-<a href="https://wa.me/504XXXXXXXX" class="btn btn-primary">Hablar por WhatsApp</a>
+<a href="https://wa.me/50433292869?text=Hola!%20Necesito%20m%C3%A1s%20informaci%C3%B3n%20sobre%20WAKE%20HEALTH!" class="btn btn-primary">Hablar por WhatsApp</a>
 </div>
 </section>
 
 <footer>
-<p>© 2026 WAKE HEALTH</p>
+<p>© 2026 WAKE HEALTH | Soluciones Tecnológicas para el Sector Salud</p>
 </footer>
+
+<!-- CONTENEDOR DEL MODAL PARA LAS IMÁGENES -->
+<div id="imageModal" class="modal">
+    <span class="close-modal">&times;</span>
+    <img class="modal-content" id="modalImage">
+</div>
+
+<!-- SCRIPT PARA CONTROLAR EL MODAL -->
+<script>
+    // Seleccionamos los elementos necesarios
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    const images = document.querySelectorAll(".gallery-card img");
+    const closeBtn = document.querySelector(".close-modal");
+
+    // Al hacer clic en cualquier imagen de la galería, se abre el modal
+    images.forEach(img => {
+        img.addEventListener('click', function() {
+            modal.style.display = "block";
+            modalImg.src = this.src; // Pasa la ruta de la imagen clickeada al modal
+        });
+    });
+
+    // Cierra el modal al hacer clic en la "X"
+    closeBtn.addEventListener('click', function() {
+        modal.style.display = "none";
+    });
+
+    // Cierra el modal si haces clic fuera de la imagen (en el fondo oscuro)
+    modal.addEventListener('click', function(e) {
+        if (e.target !== modalImg) {
+            modal.style.display = "none";
+        }
+    });
+</script>
 
 </body>
 </html>
