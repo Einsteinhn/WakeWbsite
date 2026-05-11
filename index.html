@@ -6,7 +6,7 @@
   <title>WAKE SOLUTIONS | Soluciones Tecnológicas Empresariales</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&amp;family=Montserrat:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
         * {
@@ -29,6 +29,7 @@
             height: 100%;
             width: 100%;
             font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
         }
 
         body {
@@ -58,17 +59,17 @@
         }
 
         .logo {
-    font-family: 'Poppins', sans-serif;
-    font-size: 24px;
-    font-weight: 800;
-    color: var(--primary);
-    letter-spacing: -0.5px;
-}
+            font-family: 'Poppins', sans-serif;
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary);
+            letter-spacing: -0.5px;
+        }
 
-.logo img {
-    height: 45px;
-    width: auto;
-}
+        .logo img {
+            height: 45px;
+            width: auto;
+        }
 
         .logo span {
             color: var(--accent);
@@ -176,13 +177,13 @@
 
         /* ABOUT SECTION */
         .about {
-    padding: 120px 20px; /* Un poco más de espacio para que se luzca el fondo */
-    background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), 
-                url(https://lh3.googleusercontent.com/d/18u2eeRx6lo4hbFExQbNKIPBydwkmYsvT);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; /* Esto crea un efecto tipo parallax elegante */
-}
+            padding: 120px 20px;
+            background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), 
+                        url(https://lh3.googleusercontent.com/d/18u2eeRx6lo4hbFExQbNKIPBydwkmYsvT);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
 
         .about-container {
             max-width: 900px;
@@ -262,6 +263,97 @@
             line-height: 1.8;
         }
 
+        /* PRODUCTS SECTION (NEW) */
+        .products {
+            padding: 80px 20px;
+            background: var(--white);
+        }
+
+        .products-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .products-grid {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+
+        .product-card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 12px;
+            border: 2px solid #e0e0e0;
+            text-align: center;
+            text-decoration: none;
+            max-width: 450px;
+            width: 100%;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            border-color: var(--accent);
+        }
+
+        .product-logo {
+            height: 70px;
+            margin-bottom: 25px;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover .product-logo {
+            transform: scale(1.05);
+        }
+
+        .product-card h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .product-card p {
+            font-size: 15px;
+            color: var(--light-text);
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .product-card .btn-link {
+            font-family: 'Poppins', sans-serif;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 15px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: auto;
+            transition: color 0.3s ease;
+        }
+
+        .product-card:hover .btn-link {
+            color: #1a1a1a;
+        }
+
+        .product-card .btn-link i {
+            color: var(--accent);
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover .btn-link i {
+            transform: translateX(5px);
+        }
+
         /* CASES SECTION */
         .cases {
             padding: 80px 20px;
@@ -294,36 +386,36 @@
         }
 
         .client-logo {
-    text-align: center;
-    padding: 20px;
-    background: var(--white);
-    border-radius: 10px;
-    transition: all 0.3s ease-out; /* Transición suave */
-    height: 120px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform: translateY(0); /* Estado inicial */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombra inicial para dar profundidad */
-}
+            text-align: center;
+            padding: 20px;
+            background: var(--white);
+            border-radius: 10px;
+            transition: all 0.3s ease-out;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: translateY(0);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
 
-.client-logo:hover {
-    transform: translateY(-10px) scale(1.05); /* Efecto de flotado y agrandamiento */
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); /* Sombra más intensa cuando se pasa el mouse */
-}
+        .client-logo:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
 
-.client-logo img {
-    max-height: 80px;
-    max-width: 90%;
-    object-fit: contain;
-    filter: grayscale(100%);
-    transition: filter 0.3s ease, transform 0.3s ease; /* Transición suave para efectos */
-}
+        .client-logo img {
+            max-height: 80px;
+            max-width: 90%;
+            object-fit: contain;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease, transform 0.3s ease;
+        }
 
-.client-logo:hover img {
-    filter: grayscale(0%); /* Se quita el filtro en hover */
-    transform: scale(1.1); /* Efecto de agrandar la imagen */
-}
+        .client-logo:hover img {
+            filter: grayscale(0%);
+            transform: scale(1.1);
+        }
 
         .results-grid {
             display: grid;
@@ -382,22 +474,21 @@
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             position: relative;
         }
-        /* Efecto de elevación al pasar el mouse */
-.pricing-card:hover {
-    transform: translateY(-15px); /* Se eleva 15 píxeles */
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); /* Sombra más grande al "subir" */
-    border-color: var(--accent); /* El borde se ilumina con tu color de marca */
-}
 
-/* Ajuste para la tarjeta popular (para que no pierda su escala especial) */
-.pricing-card.popular:hover {
-    transform: scale(1.05) translateY(-15px);
-}
+        .pricing-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border-color: var(--accent);
+        }
 
-.pricing-card:hover .btn-primary {
-    transform: scale(1.02);
-    filter: brightness(1.1);
-}
+        .pricing-card.popular:hover {
+            transform: scale(1.05) translateY(-15px);
+        }
+
+        .pricing-card:hover .btn-primary {
+            transform: scale(1.02);
+            filter: brightness(1.1);
+        }
 
         .pricing-card.popular {
             border-color: var(--accent);
@@ -636,51 +727,22 @@
 
         /* RESPONSIVE */
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 36px;
-            }
-
-            .section-title {
-                font-size: 28px;
-            }
-
-            .hero-buttons {
-                flex-direction: column;
-            }
-
-            .pricing-card.popular {
-                transform: scale(1);
-            }
-
-            nav {
-                display: none;
-            }
-
-            nav a {
-                margin-left: 0;
-            }
-
-            .clients-grid {
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            }
+            .hero h1 { font-size: 36px; }
+            .section-title { font-size: 28px; }
+            .hero-buttons { flex-direction: column; }
+            .pricing-card.popular { transform: scale(1); }
+            nav { display: none; }
+            nav a { margin-left: 0; }
+            .clients-grid { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
         }
 
         /* ANIMATIONS */
         @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
-        .service-card {
-            animation: fadeInUp 0.6s ease-out forwards;
-        }
-
+        .service-card { animation: fadeInUp 0.6s ease-out forwards; }
         .service-card:nth-child(1) { animation-delay: 0.1s; }
         .service-card:nth-child(2) { animation-delay: 0.2s; }
         .service-card:nth-child(3) { animation-delay: 0.3s; }
@@ -689,28 +751,44 @@
     </style>
   <style>body { box-sizing: border-box; }</style>
   <script src="https://cdn.tailwindcss.com/3.4.17" type="text/javascript"></script>
-  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
-  <script src="/_sdk/element_sdk.js" type="text/javascript"></script>
- <link rel="icon" type="image/svg+xml" href="wakeicon.svg">
  </head>
- <body><!-- HEADER -->
+ <body>
+
+  <!-- HEADER -->
   <header>
    <div class="header-container">
     <div class="logo">
         <img src="https://lh3.googleusercontent.com/d/1Bkvz0VkWBsWgZIh6ewkMzUFqVQfj3FOQ" alt="WAKE Solutions Logo">
         </div>
-    <nav><a href="#hero">Inicio</a> <a href="#about">Nosotros</a> <a href="#services">Servicios</a> <a href="#cases">Casos de Éxito</a> <a href="#pricing">Precios</a> <a href="#contact">Contacto</a>
+    <nav>
+        <a href="#hero">Inicio</a> 
+        <a href="#about">Nosotros</a> 
+        <a href="#services">Servicios</a> 
+        <a href="#products">Productos</a> <!-- Nuevo Link -->
+        <a href="#cases">Casos de Éxito</a> 
+        <a href="#pricing">Precios</a> 
+        <a href="#contact">Contacto</a>
     </nav>
    </div>
-  </header><!-- HERO SECTION -->
+  </header>
+
+  <!-- HERO SECTION -->
   <section id="hero" class="hero">
    <div class="hero-content">
     <h1>Digitaliza, Optimiza &amp; Crece</h1>
     <p>En <b>WAKE SOLUTIONS</b> ayudamos a empresas a digitalizar, optimizar y crecer sus operaciones mediante <b>soluciones tecnológicas</b> empresariales diseñadas para generar <b>orden, control y crecimiento sostenible</b>.</p>
-    <div class="hero-buttons"><button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">SOLICITAR UN DEMO</button> <button class="btn btn-secondary" onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'})">Conocer servicios</button>
+    <div class="hero-buttons">
+      <button class="btn btn-primary" onclick="window.open('https://wa.me/50433292869', '_blank')">
+        SOLICITAR UN DEMO
+      </button>
+      <button class="btn btn-secondary" onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'})">
+        Conocer servicios
+      </button>
     </div>
    </div>
-  </section><!-- ABOUT SECTION -->
+  </section>
+
+  <!-- ABOUT SECTION -->
   <section id="about" class="about">
    <div class="about-container">
     <h2 class="section-title">Somos WAKE SOLUTIONS</h2>
@@ -721,44 +799,60 @@
      <p>Trabajamos con un <B>enfoque estructurado</B>, premium y orientado a resultados medibles, priorizando la rentabilidad, la escalabilidad y la expansión de nuestros clientes.</p>
     </div>
    </div>
-  </section><!-- SERVICES SECTION -->
+  </section>
+
+  <!-- SERVICES SECTION -->
   <section id="services" class="services">
    <div class="services-container">
     <h2 class="section-title">Nuestros Servicios</h2>
     <div class="services-grid">
      <div class="service-card">
-      <div class="service-icon"><i class="fas fa-cogs"></i>
-      </div>
+      <div class="service-icon"><i class="fas fa-cogs"></i></div>
       <h3>Sistematización de negocios</h3>
       <p>Implementamos sistemas que permiten controlar ventas, inventarios, finanzas y operaciones en un solo lugar.</p>
      </div>
      <div class="service-card">
-      <div class="service-icon"><i class="fas fa-tools"></i>
-      </div>
+      <div class="service-icon"><i class="fas fa-tools"></i></div>
       <h3>Implementación de soluciones</h3>
       <p>Diseñamos e implementamos sistemas empresariales adaptados a las necesidades específicas de cada negocio.</p>
      </div>
      <div class="service-card">
-      <div class="service-icon"><i class="fas fa-bolt"></i>
-      </div>
+      <div class="service-icon"><i class="fas fa-bolt"></i></div>
       <h3>Automatización de procesos</h3>
       <p>Optimizamos procesos internos para reducir errores, ahorrar tiempo y mejorar la productividad.</p>
      </div>
      <div class="service-card">
-      <div class="service-icon"><i class="fas fa-network-wired"></i>
-      </div>
+      <div class="service-icon"><i class="fas fa-network-wired"></i></div>
       <h3>Infraestructura tecnológica empresarial</h3>
       <p>Ayudamos a las empresas a construir una base tecnológica sólida para soportar su crecimiento.</p>
      </div>
      <div class="service-card">
-      <div class="service-icon"><i class="fas fa-chart-line"></i>
-      </div>
+      <div class="service-icon"><i class="fas fa-chart-line"></i></div>
       <h3>Consultoría tecnológica</h3>
       <p>Analizamos el estado actual de la empresa y diseñamos estrategias digitales para mejorar la eficiencia y el crecimiento.</p>
      </div>
     </div>
    </div>
-  </section><!-- CASES SECTION -->
+  </section>
+
+  <!-- PRODUCTS SECTION (NUEVA SECCIÓN) -->
+  <section id="products" class="products">
+    <div class="products-container">
+        <h2 class="section-title">Nuestros Productos</h2>
+        <div class="products-grid">
+            <!-- WAKE Health Card -->
+            <a href="https://wake.solutions/health" class="product-card">
+                <img src="https://pub-c91a757ecc0647fc9f8436786c936eff.r2.dev/logos/WAKE%20healt%20svg.svg" alt="WAKE Health Logo" class="product-logo">
+                <h3>WAKE Health</h3>
+                <p>El sistema integral de gestión de clínicas diseñado para optimizar el control de pacientes, citas e historial médico de forma segura y eficiente.</p>
+                <div class="btn-link">Conocer el software <i class="fas fa-arrow-right"></i></div>
+            </a>
+            <!-- Puedes añadir más productos aquí en el futuro -->
+        </div>
+    </div>
+  </section>
+
+  <!-- CASES SECTION -->
   <section id="cases" class="cases">
    <div class="cases-container">
     <div class="cases-intro">
@@ -766,70 +860,55 @@
      <p>Empresas que han trabajado con WAKE SOLUTIONS han logrado mejorar significativamente su control operativo y su eficiencia empresarial.</p>
     </div>
     <div class="clients-grid">
-     <div class="client-logo"><img src="https://lh3.googleusercontent.com/d/1ZwSVPhyS1dJcbxYjlJH8PfO0Q9sc64NB" alt="Cliente 1" loading="lazy" onerror="console.error('Image failed:', this.src); this.style.background='#f0f0f0'; this.alt='Logo cliente';">
-     </div>
-     <div class="client-logo"><img src="https://lh3.googleusercontent.com/d/1dFJNLP-3p855R1hCtLvAnAEDIBlzuPEr" alt="Cliente 2" loading="lazy" onerror="console.error('Image failed:', this.src); this.style.background='#f0f0f0'; this.alt='Logo cliente';">
-     </div>
-     <div class="client-logo"><img src="https://lh3.googleusercontent.com/d/18bvpl-104yGuCtGxQ-3w_XzOX-Vk576p" alt="Cliente 3" loading="lazy" onerror="console.error('Image failed:', this.src); this.style.background='#f0f0f0'; this.alt='Logo cliente';">
-     </div>
-     <div class="client-logo"><img src="https://lh3.googleusercontent.com/d/1S3byR29fdjwN_VtF8eecd5NhSGk5oCMY" alt="Cliente 4" loading="lazy" onerror="console.error('Image failed:', this.src); this.style.background='#f0f0f0'; this.alt='Logo cliente';">
-     </div>
-     <div class="client-logo"><img src="https://lh3.googleusercontent.com/d/1-Ioj0XeJoDFmjQpkEftAVIgM81WknWe0" alt="Cliente 5" loading="lazy" onerror="console.error('Image failed:', this.src); this.style.background='#f0f0f0'; this.alt='Logo cliente';">
-     </div>
+     <div class="client-logo"><img src="https://lh3.googleusercontent.com/d/1ZwSVPhyS1dJcbxYjlJH8PfO0Q9sc64NB" alt="Cliente 1" loading="lazy"></div>
+     <div class="client-logo"><img src="https://lh3.googleusercontent.com/d/1dFJNLP-3p855R1hCtLvAnAEDIBlzuPEr" alt="Cliente 2" loading="lazy"></div>
+     <div class="client-logo"><img src="https://lh3.googleusercontent.com/d/18bvpl-104yGuCtGxQ-3w_XzOX-Vk576p" alt="Cliente 3" loading="lazy"></div>
+     <div class="client-logo"><img src="https://lh3.googleusercontent.com/d/1S3byR29fdjwN_VtF8eecd5NhSGk5oCMY" alt="Cliente 4" loading="lazy"></div>
+     <div class="client-logo"><img src="https://lh3.googleusercontent.com/d/1-Ioj0XeJoDFmjQpkEftAVIgM81WknWe0" alt="Cliente 5" loading="lazy"></div>
     </div>
     <div class="results-grid">
-     <div class="result-item">
-      <p>Negocios que redujeron errores operativos en más del 50%</p>
-     </div>
-     <div class="result-item">
-      <p>Empresas que ahora tienen control completo de inventarios y ventas</p>
-     </div>
-     <div class="result-item">
-      <p>Procesos administrativos automatizados</p>
-     </div>
-     <div class="result-item">
-      <p>Mayor claridad financiera y toma de decisiones basada en datos</p>
-     </div>
+     <div class="result-item"><p>Negocios que redujeron errores operativos en más del 50%</p></div>
+     <div class="result-item"><p>Empresas que ahora tienen control completo de inventarios y ventas</p></div>
+     <div class="result-item"><p>Procesos administrativos automatizados</p></div>
+     <div class="result-item"><p>Mayor claridad financiera y toma de decisiones basada en datos</p></div>
     </div>
    </div>
-  </section><!-- PRICING SECTION -->
+  </section>
+
+  <!-- PRICING SECTION -->
   <section id="pricing" class="pricing">
    <div class="pricing-container">
     <h2 class="section-title">Planes de Soluciones</h2>
-    <div class="pricing-grid"><!-- Plan Estandar -->
+    <div class="pricing-grid">
      <div class="pricing-card">
       <h3>Estándar</h3>
       <p class="description">Ideal para pequeños negocios que quieren comenzar a digitalizar su operación.</p>
-      <div class="pricing-price">
-       L. 849<span class="period">/mes</span>
-      </div>
+      <div class="pricing-price">L. 849<span class="period">/mes</span></div>
       <ul class="pricing-features">
        <li>Facturación</li>
        <li>Inventario</li>
        <li>5 usuarios</li>
        <li>CRM (Clientes)</li>
-      </ul><button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Solicitar Demo</button>
-     </div><!-- Plan Plus (Popular) -->
+      </ul>
+      <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Solicitar Demo</button>
+     </div>
      <div class="pricing-card popular">
       <h3>Plus</h3>
       <p class="description">Perfecto para empresas que buscan optimizar procesos y tener control completo de su operación.</p>
-      <div class="pricing-price">
-       L. 1,499<span class="period">/mes</span>
-      </div>
+      <div class="pricing-price">L. 1,499<span class="period">/mes</span></div>
       <ul class="pricing-features">
        <li>Todo lo anterior</li>
        <li>Contabilidad</li>
        <li>Compras</li>
        <li>Catálogo web</li>
        <li>10 usuarios</li>
-      </ul><button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Solicitar Demo</button>
-     </div><!-- Plan Empresa -->
+      </ul>
+      <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Solicitar Demo</button>
+     </div>
      <div class="pricing-card">
       <h3>Empresa</h3>
       <p class="description">Diseñado para empresas consolidadas o equipos de expansión.</p>
-      <div class="pricing-price">
-       L. 3,199<span class="period">/mes</span>
-      </div>
+      <div class="pricing-price">L. 3,199<span class="period">/mes</span></div>
       <ul class="pricing-features">
        <li>Todo lo anterior</li>
        <li>15 usuarios</li>
@@ -837,44 +916,42 @@
        <li>Nómina</li>
        <li>Proyectos</li>
        <li>Soporte preferencial</li>
-      </ul><button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Contactar Ventas</button>
+      </ul>
+      <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Contactar Ventas</button>
      </div>
     </div>
    </div>
-  </section><!-- CONTACT SECTION -->
+  </section>
+
+  <!-- CONTACT SECTION -->
   <section id="contact" class="contact">
    <div class="contact-container">
     <h2>Hablemos de tu negocio</h2>
     <p class="contact-intro">Si quieres digitalizar, optimizar y escalar tu empresa con tecnología, nuestro equipo está listo para ayudarte.</p>
     <form id="contactForm" onsubmit="handleSubmit(event)">
-     <div class="form-group"><label for="name">Nombre *</label> <input type="text" id="name" name="name" required>
-     </div>
-     <div class="form-group"><label for="company">Empresa</label> <input type="text" id="company" name="company">
-     </div>
-     <div class="form-group"><label for="email">Email *</label> <input type="email" id="email" name="email" required>
-     </div>
-     <div class="form-group"><label for="phone">Teléfono</label> <input type="tel" id="phone" name="phone">
-     </div>
-     <div class="form-group"><label for="message">Mensaje</label> <textarea id="message" name="message"></textarea>
-     </div><button type="submit" class="btn btn-primary">Contáctanos</button>
+     <div class="form-group"><label for="name">Nombre *</label> <input type="text" id="name" name="name" required></div>
+     <div class="form-group"><label for="company">Empresa</label> <input type="text" id="company" name="company"></div>
+     <div class="form-group"><label for="email">Email *</label> <input type="email" id="email" name="email" required></div>
+     <div class="form-group"><label for="phone">Teléfono</label> <input type="tel" id="phone" name="phone"></div>
+     <div class="form-group"><label for="message">Mensaje</label> <textarea id="message" name="message"></textarea></div>
+     <button type="submit" class="btn btn-primary">Contáctanos</button>
     </form>
    </div>
-  </section><!-- FOOTER -->
+  </section>
+
+  <!-- FOOTER -->
   <footer>
    <div class="footer-container">
-    <div class="footer-logo">
-     WAKE<span>.</span>
-    </div>
+    <div class="footer-logo">WAKE<span>.</span></div>
     <p class="footer-tagline">Digitaliza, Optimiza & Crece</p>
     <div class="footer-info">
-     <div><strong>Ubicación</strong> Honduras
-     </div>
-     <div><strong>Email</strong> <a href="mailto:ventas@wake.solution" style="color: rgba(255,255,255,0.8); text-decoration: none;">ventas@wake.solution</a>
-     </div>
+     <div><strong>Ubicación</strong> Honduras</div>
+     <div><strong>Email</strong> <a href="mailto:ventas@wake.solution" style="color: rgba(255,255,255,0.8); text-decoration: none;">ventas@wake.solution</a></div>
      <div><strong>Síguenos</strong>
-      <div class="social-links"><a href="https://www.facebook.com/WakeSolutionsHN/" title="Facebook" target="_blank">
-    <i class="fab fa-facebook"></i>
-</a><a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a> <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <div class="social-links">
+          <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a> 
+          <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a> 
+          <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
       </div>
      </div>
     </div>
@@ -883,6 +960,7 @@
     </div>
    </div>
   </footer>
+
   <script>
         function handleSubmit(event) {
             event.preventDefault();
@@ -893,220 +971,14 @@
             const phone = document.getElementById('phone').value;
             const message = document.getElementById('message').value;
             
-            // Crear mailto con los datos del formulario
             const mailtoLink = `mailto:ventas@wake.solution?subject=Solicitud de Demo - ${name}&body=Nombre: ${name}%0AEmpresa: ${company}%0AEmail: ${email}%0ATelefono: ${phone}%0A%0AMensaje:%0A${message}`;
             
             window.open(mailtoLink);
-            
-            // Resetear formulario
             document.getElementById('contactForm').reset();
         }
 
-        // Smooth scroll behavior
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({behavior: 'smooth'});
-                }
-            });
-        });
-    </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9dae1068220b5c71',t:'MTc3MzI2ODg2MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
-
-  <!-- ENLACES DE MODAL EN FOOTER -->
-<div style="position: fixed; bottom: 20px; left: 20px; z-index: 2000; font-size: 14px;">
-    <a href="#" id="privacyLink" style="color: var(--white); margin-right: 15px; text-decoration: underline; cursor: pointer;">Políticas de Privacidad</a>
-    <a href="#" id="termsLink" style="color: var(--white); text-decoration: underline; cursor: pointer;">Términos y Condiciones</a>
-</div>
-
-<!-- MODAL -->
-<div id="modalOverlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.6); z-index: 3000; overflow-y: auto;">
-    <div style="
-        background: linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.95)), 
-                    url('https://lh3.googleusercontent.com/d/18u2eeRx6lo4hbFExQbNKIPBydwkmYsvT') center/cover no-repeat;
-        max-width: 900px;
-        margin: 50px auto;
-        padding: 40px;
-        border-radius: 12px;
-        position: relative;
-        font-family: 'Montserrat', sans-serif;
-        color: var(--text);
-    ">
-        <button id="closeModal" style="position:absolute; top:15px; right:20px; font-size:22px; border:none; background:none; cursor:pointer;">✖</button>
-        <div id="modalContent" style="max-height: 80vh; overflow-y: auto; line-height: 1.6; font-size: 14px;">
-            <!-- Contenido cargado por JS -->
-        </div>
-    </div>
-</div>
-
-<script>
-    const modalOverlay = document.getElementById('modalOverlay');
-    const modalContent = document.getElementById('modalContent');
-    const closeModal = document.getElementById('closeModal');
-
-    const privacyText = `
-        <h2>Política de Privacidad – WAKE SOLUTIONS</h2>
-        <p><strong>Versión 1.0 – Última actualización: Marzo 2026</strong></p>
-
-        <h3>1. Introducción</h3>
-        <p>En <strong>Wake Solutions – Wake S. de R. L.</strong>, valoramos su privacidad y nos comprometemos a proteger la información personal y empresarial que usted nos proporciona al usar nuestro software <strong>Wake ERP</strong>. Esta política explica cómo recopilamos, usamos y protegemos la información de los usuarios, cumpliendo con las leyes de privacidad y protección de datos vigentes en Honduras y otras jurisdicciones aplicables.</p>
-
-        <h3>2. Información Recopilada</h3>
-        <ul>
-            <li>Nombre, correo electrónico y teléfono de contacto.</li>
-            <li>Información de su empresa (razón social, dirección, rubro).</li>
-            <li>Información financiera necesaria para facturación y suscripciones (datos de pago procesados por Pixel Pay o plataformas equivalentes).</li>
-            <li>Datos operativos generados dentro del software (transacciones, inventarios, contabilidad, reportes).</li>
-            <li>Documentación de temática fiscal para implementar en los servicios solicitados por su empresa (Factura, número CAI, RTN/NIF u otros).</li>
-        </ul>
-        <p>La información recopilada se utiliza exclusivamente para proporcionar y mejorar nuestros servicios.</p>
-
-        <h3>3. Uso de la Información</h3>
-        <ul>
-            <li>Brindar acceso y soporte a Wake ERP.</li>
-            <li>Facturación y gestión de suscripciones.</li>
-            <li>Mejorar la funcionalidad del software y la experiencia del usuario.</li>
-            <li>Comunicaciones relacionadas con actualizaciones del software, soporte técnico o avisos importantes sobre el servicio.</li>
-        </ul>
-
-        <h3>4. Protección de Datos</h3>
-        <ul>
-            <li>Acceso no autorizado</li>
-            <li>Divulgación</li>
-            <li>Alteración</li>
-            <li>Pérdida o destrucción</li>
-        </ul>
-        <p>Entre las medidas utilizadas están: encriptación de datos, firewalls, autenticación segura y control de accesos internos.</p>
-
-        <h3>5. Compartir Información</h3>
-        <p>No vendemos, alquilamos ni compartimos su información personal o empresarial con terceros, excepto cuando sea necesario para:</p>
-        <ul>
-            <li>Cumplir con obligaciones legales.</li>
-            <li>Proteger nuestros derechos y propiedad intelectual.</li>
-            <li>Proporcionar servicios esenciales de terceros que soporten el funcionamiento de Wake ERP (por ejemplo, plataformas de pago como Pixel Pay).</li>
-        </ul>
-
-        <h3>6. Cookies y Tecnologías Similares</h3>
-        <p>Wake ERP puede utilizar cookies y tecnologías similares para mejorar la experiencia del usuario, analizar el uso de la plataforma y personalizar contenidos y comunicaciones.</p>
-
-        <h3>7. Derechos del Usuario</h3>
-        <p>Usted tiene derecho a:</p>
-        <ul>
-            <li>Acceder a sus datos personales y empresariales.</li>
-            <li>Solicitar la corrección de datos inexactos.</li>
-            <li>Solicitar la eliminación o restricción del uso de sus datos.</li>
-        </ul>
-        <p>Para ejercer estos derechos o realizar consultas adicionales, contáctenos a través de los medios proporcionados al final de este documento.</p>
-
-        <h3>8. Retención de Datos</h3>
-        <p>Sus datos serán conservados únicamente durante el tiempo necesario para cumplir con los fines para los cuales fueron recopilados, incluyendo la prestación del servicio, obligaciones legales y resolución de disputas.</p>
-
-        <h3>9. Cambios en la Política de Privacidad</h3>
-        <p>Wake Solutions se reserva el derecho de actualizar esta política en cualquier momento. El uso continuado de Wake ERP después de los cambios constituye aceptación de los mismos.</p>
-
-        <h3>10. Contacto y Soporte</h3>
-        <p>Correo electrónico: <a href="mailto:ventas@wake.solutions">ventas@wake.solutions</a></p>
-    `;
-
-    const termsText = `
-        <h2>Términos y Condiciones de Uso del Software WAKE SOLUTIONS</h2>
-        <p><strong>Versión 1.0 – Última actualización: Marzo 2026</strong></p>
-
-        <h3>1. Aceptación de los Términos</h3>
-        <p>Estos Términos y Condiciones de uso constituyen un acuerdo legal entre usted (el "Usuario" o la "Empresa") y <strong>Wake Solutions – Wake S. de R. L.</strong>, con domicilio en Honduras, y regulan el uso de nuestra plataforma de servicios tecnológicos y software empresarial (“Wake ERP” o “el Software”).</p>
-        <p>Al implementar nuestras soluciones tecnológicas, instalar o usar el Software, usted acepta cumplir estos términos y nuestra Política de Privacidad. Si no está de acuerdo con alguno de estos términos, no podrá utilizar nuestras soluciones tecnológicas o el Software.</p>
-
-        <h3>2. Declaración de Capacidad</h3>
-        <ul>
-            <li>Tiene la capacidad legal para celebrar contratos y actuar en nombre de su empresa.</li>
-            <li>Es mayor de edad según la legislación aplicable.</li>
-            <li>No está sujeto a ninguna restricción legal que impida celebrar contratos.</li>
-        </ul>
-        <p>Wake Solutions se reserva el derecho de solicitar documentación que respalde su capacidad legal.</p>
-
-        <h3>3. Licencia de Uso</h3>
-        <p>Wake Solutions otorga al Usuario una licencia limitada, no exclusiva, intransferible y revocable para usar el Software según estos términos.</p>
-        <ul>
-            <li>El Software debe utilizarse únicamente para la gestión empresarial de la empresa del Usuario, incluyendo contabilidad, inventarios, ventas y operaciones compatibles con Wake.</li>
-            <li>Queda prohibido modificar, reproducir, distribuir o comercializar el Software sin autorización.</li>
-            <li>Queda prohibido intentar vulnerar la seguridad del Software o acceder a funcionalidades no autorizadas.</li>
-        </ul>
-
-        <h3>4. Responsabilidades del Usuario</h3>
-        <ul>
-            <li>Mantener la confidencialidad de sus credenciales de acceso.</li>
-            <li>Proporcionar información veraz y completa al registrarse.</li>
-            <li>No usar el Software para fines ilegales, fraudulentos o no autorizados.</li>
-        </ul>
-        <p>Wake Solutions se reserva el derecho de suspender o cancelar cuentas que incumplan estas obligaciones.</p>
-
-        <h3>5. Demostración del Software</h3>
-        <ul>
-            <li>Wake Solutions ofrece un demo gratuito de 7 días antes de la contratación definitiva.</li>
-            <li>Durante el demo, algunas funcionalidades pueden estar limitadas.</li>
-            <li>La información ingresada durante el demo puede eliminarse posteriormente.</li>
-            <li>El demo permite al Usuario evaluar la solución antes de suscribirse a cualquier plan.</li>
-        </ul>
-
-        <h3>6. Condiciones y Medios de Pago</h3>
-        <p>La contratación del Software se realiza mediante planes de suscripción (mensual o anual). Los pagos se procesarán mediante Pixel Pay u otras plataformas seguras de pago electrónico.</p>
-
-        <h3>7. Reembolsos y Cancelaciones</h3>
-        <ul>
-            <li>No se ofrecen reembolsos por servicios ya prestados.</li>
-            <li>En caso de error en la facturación, el Usuario debe contactarnos para corregir la situación.</li>
-            <li>Las cancelaciones deben realizarse antes de la renovación automática para evitar cargos adicionales.</li>
-            <li>Cualquier pago en exceso puede aplicarse como crédito para futuros servicios.</li>
-        </ul>
-
-        <h3>8. Garantía</h3>
-        <ul>
-            <li>El Software será implementado conforme a las especificaciones acordadas.</li>
-            <li>Se prestará soporte técnico razonable según las condiciones del contrato.</li>
-            <li>No se garantiza que el Software esté libre de interrupciones o errores menores.</li>
-        </ul>
-
-        <h3>9. Modificaciones del Software y de los Términos</h3>
-        <p>Wake Solutions puede modificar o actualizar el Software y estos Términos en cualquier momento. El uso continuado del Software constituye aceptación de dichos cambios.</p>
-
-        <h3>10. Limitación de Responsabilidad</h3>
-        <ul>
-            <li>Wake Solutions no será responsable por pérdidas de datos o interrupciones del servicio fuera de su control.</li>
-            <li>No se hace responsable por daños indirectos, lucro cesante o pérdida de oportunidades.</li>
-            <li>No se hace responsable por uso indebido del Software por parte del Usuario.</li>
-        </ul>
-
-        <h3>11. Ley Aplicable y Jurisdicción</h3>
-        <p>Estos términos se rigen por las leyes de Honduras. Cualquier disputa será sometida a la jurisdicción exclusiva de los tribunales competentes en Honduras.</p>
-
-        <h3>12. Contacto</h3>
-        <p>Correo: <a href="mailto:ventas@wake.solutions">ventas@wake.solutions</a></p>
-    `;
-
-    document.getElementById('privacyLink').addEventListener('click', function(e){
-        e.preventDefault();
-        modalContent.innerHTML = privacyText;
-        modalOverlay.style.display = 'block';
-    });
-
-    document.getElementById('termsLink').addEventListener('click', function(e){
-        e.preventDefault();
-        modalContent.innerHTML = termsText;
-        modalOverlay.style.display = 'block';
-    });
-
-    closeModal.addEventListener('click', function(){
-        modalOverlay.style.display = 'none';
-    });
-
-    modalOverlay.addEventListener('click', function(e){
-        if(e.target === modalOverlay){
-            modalOverlay.style.display = 'none';
-        }
-    });
-</script>
- 
+        // Ya no es necesario el script manual de smooth scroll porque usé la regla 'scroll-behavior: smooth;' en el CSS global. 
+        // Esto hace que toda la página fluya mejor y el código sea más limpio.
+  </script>
  </body>
 </html>
