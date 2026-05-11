@@ -18,18 +18,20 @@
 --text:#333;
 --light:#8f8f8f;
 --white:#fff;
+--dark-btn: #1a1a1a;
 }
 
 body{
 font-family:'Montserrat',sans-serif;
 color:var(--text);
 line-height: 1.6;
+scroll-behavior: smooth;
 }
 
 /* HEADER */
 header{
 background:white;
-padding:20px;
+padding:15px 20px;
 box-shadow:0 2px 10px rgba(0,0,0,0.05);
 position:sticky;
 top:0;
@@ -37,7 +39,7 @@ z-index:100;
 }
 
 .container{
-max-width:1100px;
+max-width:1200px;
 margin:auto;
 display:flex;
 justify-content:space-between;
@@ -46,8 +48,13 @@ align-items:center;
 
 .logo img{height:45px;}
 
+nav {
+    display: flex;
+    align-items: center;
+}
+
 nav a{
-margin-left:20px;
+margin-left:25px;
 text-decoration:none;
 color:var(--text);
 font-size:14px;
@@ -57,6 +64,24 @@ transition: 0.3s;
 
 nav a:hover{
 color: #16c2a3;
+}
+
+/* BOTÓN DE ACCESO EN NAV */
+.btn-nav-access {
+    background: var(--dark-btn);
+    color: var(--white) !important;
+    padding: 10px 20px;
+    border-radius: 6px;
+    margin-left: 30px;
+    font-size: 13px !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-nav-access:hover {
+    background: #000;
+    transform: translateY(-2px);
 }
 
 /* HERO CON PARALLAX */
@@ -117,7 +142,7 @@ margin:auto;
 margin-bottom:30px;
 }
 
-/* BOTONES */
+/* BOTONES PRINCIPALES */
 .btn{
 padding:14px 30px;
 border-radius:8px;
@@ -128,6 +153,7 @@ margin:5px;
 text-decoration:none;
 display:inline-block;
 transition:0.3s;
+font-family: 'Poppins';
 }
 
 .btn-primary{
@@ -149,6 +175,21 @@ color:white;
 .btn-secondary:hover{
 background:white;
 color:black;
+}
+
+/* NUEVO BOTÓN DE PRUEBA EN HERO */
+.btn-try {
+    background: rgba(255,255,255,0.1);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.3);
+    backdrop-filter: blur(5px);
+    margin-top: 20px;
+}
+
+.btn-try:hover {
+    background: var(--accent);
+    color: #000;
+    border-color: var(--accent);
 }
 
 /* SECTION */
@@ -211,7 +252,7 @@ border-radius: 50%;
     margin-bottom: 15px;
     border: 1px solid #eee;
     transition: 0.4s;
-    cursor: pointer; /* Indica que se puede hacer clic */
+    cursor: pointer;
 }
 
 .gallery-card:hover img {
@@ -230,7 +271,7 @@ border-radius: 50%;
     color: var(--light);
 }
 
-/* ESTILOS DEL MODAL (PANTALLA COMPLETA) */
+/* ESTILOS DEL MODAL */
 .modal {
     display: none; 
     position: fixed; 
@@ -270,12 +311,6 @@ border-radius: 50%;
     cursor: pointer;
 }
 
-.close-modal:hover,
-.close-modal:focus {
-    color: var(--accent);
-    text-decoration: none;
-}
-
 /* DARK SECTION */
 .dark{
 background:#222;
@@ -301,12 +336,15 @@ font-size:13px;
 }
 
 /* RESPONSIVO */
+@media (max-width: 992px) {
+    .btn-nav-access { display: none; } /* Ocultar en móviles para no amontonar el nav */
+}
+
 @media (max-width: 768px) {
     .hero h1 { font-size: 36px; }
     .container { flex-direction: column; }
-    nav { margin-top: 20px; }
-    nav a { margin: 0 10px; }
-    .close-modal { top: 10px; right: 20px; }
+    nav { margin-top: 20px; flex-wrap: wrap; justify-content: center; }
+    nav a { margin: 5px 10px; }
 }
 </style>
 
@@ -326,6 +364,10 @@ font-size:13px;
 <a href="#modulos">Sistema</a>
 <a href="#galeria">Capturas</a>
 <a href="#contacto">Demo</a>
+<!-- BOTÓN PROFESIONAL EN EL NAV -->
+<a href="https://wakehealth.vercel.app/login" class="btn-nav-access">
+    <i class="fas fa-sign-in-alt"></i> Acceso Sistema
+</a>
 </nav>
 </div>
 </header>
@@ -343,8 +385,14 @@ Deja atrás el papel, las citas desordenadas y la falta de control.
 Con <b>WAKE HEALTH</b> organizas toda tu clínica en un solo sistema.
 </p>
 
-<a href="https://wa.me/50433292869?text=Hola!%20Necesito%20m%C3%A1s%20informaci%C3%B3n%20sobre%20WAKE%20HEALTH!" class="btn btn-primary">Hablar por WhatsApp</a>
-<a href="#modulos" class="btn btn-secondary">Ver sistema</a>
+<div class="main-buttons">
+    <a href="https://wa.me/50433292869?text=Hola!%20Necesito%20m%C3%A1s%20informaci%C3%B3n%20sobre%20WAKE%20HEALTH!" class="btn btn-primary">Hablar por WhatsApp</a>
+    <a href="#modulos" class="btn btn-secondary">Ver sistema</a>
+</div>
+<!-- BOTÓN DE PRUEBA ESTILO PROFESIONAL -->
+<a href="https://wakehealth.vercel.app/login" class="btn btn-try">
+    <i class="fas fa-rocket"></i> Probar Sistema Ahora
+</a>
 </section>
 
 <!-- PROBLEMAS -->
@@ -363,7 +411,8 @@ Con <b>WAKE HEALTH</b> organizas toda tu clínica en un solo sistema.
 <h2 class="title">Un sistema. Todo bajo control.</h2>
 <p>WAKE HEALTH centraliza pacientes, citas, consultas y finanzas en un solo lugar.</p>
 <div class="cta">
-<a href="https://wa.me/50433292869?text=Hola!%20Necesito%20m%C3%A1s%20informaci%C3%B3n%20sobre%20WAKE%20HEALTH!" class="btn btn-primary">Solicitar Demo</a>
+<a href="https://wakehealth.vercel.app/login" class="btn btn-primary">Entrar al Sistema</a>
+<a href="https://wa.me/50433292869?text=Hola!%20Necesito%20m%C3%A1s%20informaci%C3%B3n%20sobre%20WAKE%20HEALTH!" class="btn btn-secondary">Solicitar Demo Personalizada</a>
 </div>
 </section>
 
@@ -387,29 +436,23 @@ Con <b>WAKE HEALTH</b> organizas toda tu clínica en un solo sistema.
 <section class="section" id="galeria" style="background: #fdfdfd; border-top: 1px solid #eee;">
     <h2 class="title">Explora la Interfaz</h2>
     <div class="grid">
-        
-        <!-- Captura 1 -->
         <div class="card gallery-card">
             <img src="https://pub-f6d32fe4d40f4f899fa753aab8eb28d5.r2.dev/capturaswakehealth/wkhpantallaprincipal.png" alt="Dashboard">
             <h4>Panel Principal</h4>
-            <p>Visualiza tus métricas, citas del día, recordatorios importantes de un vistazo y todo en un hub personalizable.</p>
+            <p>Visualiza tus métricas, citas del día, recordatorios importantes de un vistazo.</p>
         </div>
-
-        <!-- Captura 2 -->
         <div class="card gallery-card">
             <img src="https://pub-f6d32fe4d40f4f899fa753aab8eb28d5.r2.dev/capturaswakehealth/wkhcontroltotal.png" alt="Citas">
             <h4>Control de Citas</h4>
             <p>Calendario inteligente para evitar cruces y organizar a tus médicos eficientemente.</p>
         </div>
-
-        <!-- Captura 3 -->
         <div class="card gallery-card">
             <img src="https://pub-f6d32fe4d40f4f899fa753aab8eb28d5.r2.dev/capturaswakehealth/wkhdatos.png" alt="Historial">
             <h4>Expediente Digital</h4>
-            <p>Accede a diagnósticos previos, recetas y exámenes de laboratorio en segundos. Todo en un módulo profesional diseñado por especialistas.</p>
+            <p>Accede a diagnósticos previos, recetas y exámenes de laboratorio en segundos.</p>
         </div>
 
-         <!-- Captura 4 -->
+
         <div class="card gallery-card">
             <img src="https://pub-f6d32fe4d40f4f899fa753aab8eb28d5.r2.dev/capturaswakehealth/wkhatenciondirecta.png" alt="Antención Directa">
             <h4>Atención Directa</h4>
@@ -429,15 +472,17 @@ Con <b>WAKE HEALTH</b> organizas toda tu clínica en un solo sistema.
             <h4>Multidispositivo</h4>
             <p>Tu clínica en tu bolsillo. Accede a toda la información desde tu celular, tablet o computadora con una interfaz que se adapta perfectamente a cualquier pantalla.</p>
         </div>
+    
     </div>
 </section>
 
 <!-- CTA FINAL -->
 <section class="section dark" id="contacto">
 <h2 class="title">Agenda tu demostración</h2>
-<p>Te mostramos cómo funciona en vivo y resolvemos tus dudas.</p>
+<p>O si prefieres, entra directamente y conoce la interfaz ahora mismo.</p>
 <div class="cta">
 <a href="https://wa.me/50433292869?text=Hola!%20Necesito%20m%C3%A1s%20informaci%C3%B3n%20sobre%20WAKE%20HEALTH!" class="btn btn-primary">Hablar por WhatsApp</a>
+<a href="https://wakehealth.vercel.app/login" class="btn btn-secondary">Probar Sistema</a>
 </div>
 </section>
 
@@ -445,34 +490,29 @@ Con <b>WAKE HEALTH</b> organizas toda tu clínica en un solo sistema.
 <p>© 2026 WAKE HEALTH | Soluciones Tecnológicas para el Sector Salud</p>
 </footer>
 
-<!-- CONTENEDOR DEL MODAL PARA LAS IMÁGENES -->
+<!-- MODAL PARA IMÁGENES -->
 <div id="imageModal" class="modal">
     <span class="close-modal">&times;</span>
     <img class="modal-content" id="modalImage">
 </div>
 
-<!-- SCRIPT PARA CONTROLAR EL MODAL -->
 <script>
-    // Seleccionamos los elementos necesarios
     const modal = document.getElementById("imageModal");
     const modalImg = document.getElementById("modalImage");
     const images = document.querySelectorAll(".gallery-card img");
     const closeBtn = document.querySelector(".close-modal");
 
-    // Al hacer clic en cualquier imagen de la galería, se abre el modal
     images.forEach(img => {
         img.addEventListener('click', function() {
             modal.style.display = "block";
-            modalImg.src = this.src; // Pasa la ruta de la imagen clickeada al modal
+            modalImg.src = this.src;
         });
     });
 
-    // Cierra el modal al hacer clic en la "X"
     closeBtn.addEventListener('click', function() {
         modal.style.display = "none";
     });
 
-    // Cierra el modal si haces clic fuera de la imagen (en el fondo oscuro)
     modal.addEventListener('click', function(e) {
         if (e.target !== modalImg) {
             modal.style.display = "none";
