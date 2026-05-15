@@ -346,6 +346,93 @@ font-size:13px;
     nav { margin-top: 20px; flex-wrap: wrap; justify-content: center; }
     nav a { margin: 5px 10px; }
 }
+
+/* SECCIÓN DE PRECIOS */
+.pricing-section {
+    background: #f4f7f6;
+    padding: 80px 20px;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.pricing-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: 0.3s;
+    border: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-card.featured {
+    border: 2px solid var(--accent);
+    transform: scale(1.05);
+    position: relative;
+}
+
+.pricing-card.featured .badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--accent);
+    color: #000;
+    padding: 5px 20px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.price {
+    font-size: 42px;
+    font-weight: 800;
+    margin: 20px 0;
+    font-family: 'Poppins';
+}
+
+.price span {
+    font-size: 16px;
+    color: var(--light);
+}
+
+.pricing-features {
+    list-style: none;
+    margin-bottom: 30px;
+    text-align: left;
+    flex-grow: 1;
+}
+
+.pricing-features li {
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #555;
+}
+
+.pricing-features i {
+    color: #16c2a3;
+    margin-right: 10px;
+}
+
+/* Ajuste para móviles */
+@media (max-width: 768px) {
+    .pricing-card.featured {
+        transform: scale(1);
+        margin: 20px 0;
+    }
+}
+
+
+
+
 </style>
 
 </head>
@@ -476,6 +563,60 @@ Con <b>WAKE HEALTH</b> organizas toda tu clínica en un solo sistema.
     </div>
 </section>
 
+<!-- SECCIÓN DE PRECIOS (CONECTADA A PADDLE) -->
+<section class="section pricing-section" id="precios">
+    <h2 class="title">Planes diseñados para tu crecimiento</h2>
+    <div class="pricing-grid">
+        
+        <!-- PLAN BÁSICO -->
+        <div class="pricing-card">
+            <h3>Básico</h3>
+            <div class="price">$9.99<span>/mes</span></div>
+            <ul class="pricing-features">
+                <li><i class="fas fa-check"></i> Hasta 500 pacientes</li>
+                <li><i class="fas fa-check"></i> Agenda Médica</li>
+                <li><i class="fas fa-check"></i> Expediente Clínico</li>
+                <li><i class="fas fa-check"></i> Soporte por Email</li>
+            </ul>
+            <!-- AQUÍ CAMBIAMOS EL BOTÓN PARA PADDLE -->
+            <a href="#!" class="btn" style="background:#333; color:white; text-decoration:none; padding:12px; border-radius:6px; text-align:center;" onclick="Paddle.Checkout.open({ settings: { displayMode: 'overlay', theme: 'light' }, items: [{ priceId: 'pri_01krmbgr56p436gyy0vpk98pgn', quantity: 1 }] });">Elegir Plan</a>
+        </div>
+
+        <!-- PLAN PLUS -->
+        <div class="pricing-card featured">
+            <div class="badge">RECOMENDADO</div>
+            <h3>Plus</h3>
+            <div class="price">$17.99<span>/mes</span></div>
+            <ul class="pricing-features">
+                <li><i class="fas fa-check"></i> Pacientes Ilimitados</li>
+                <li><i class="fas fa-check"></i> Módulo de Laboratorio</li>
+                <li><i class="fas fa-check"></i> Facturación y Contabilidad</li>
+                <li><i class="fas fa-check"></i> Soporte Prioritario 24/7</li>
+                <li><i class="fas fa-check"></i> Diagnósticos con IA</li>
+            </ul>
+            <!-- AQUÍ CAMBIAMOS EL BOTÓN PARA PADDLE -->
+            <a href="#!" class="btn btn-primary" style="text-align:center;" onclick="Paddle.Checkout.open({ settings: { displayMode: 'overlay', theme: 'light' }, items: [{ priceId: 'pri_01krmbnb8c7nskjpaj785ry82v', quantity: 1 }] });">Comenzar Ahora</a>
+        </div>
+
+        <!-- PLAN BUSINESS -->
+        <div class="pricing-card">
+            <h3>Business</h3>
+            <div class="price">Cotizar</div>
+            <p style="margin-bottom: 20px; color: #666;">Para clínicas grandes o redes hospitalarias que necesitan una solución a medida.</p>
+            <ul class="pricing-features">
+                <li><i class="fas fa-check"></i> Multi-sucursales</li>
+                <li><i class="fas fa-check"></i> Integración API personalizada</li>
+                <li><i class="fas fa-check"></i> Servidor Dedicado</li>
+                <li><i class="fas fa-check"></i> Capacitación presencial</li>
+            </ul>
+            <!-- Este se queda enviando a WhatsApp/Correo porque es cotización personalizada -->
+            <a href="https://wa.me/50433292869?text=Hola!%20Necesito%20una%20cotizaci%C3%B3n%20para%20el%20Plan%20Business%20de%20Wake%20Health" class="btn btn-secondary" style="color:black; border-color: black; text-align:center;">Solicitar Cotización</a>
+        </div>
+
+    </div>
+</section>
+
+
 <!-- CTA FINAL -->
 <section class="section dark" id="contacto">
 <h2 class="title">Agenda tu demostración</h2>
@@ -518,6 +659,14 @@ Con <b>WAKE HEALTH</b> organizas toda tu clínica en un solo sistema.
             modal.style.display = "none";
         }
     });
+</script>
+
+<!-- Script de Paddle para procesar pagos -->
+<script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+<script type="text/javascript">
+  Paddle.Setup({ 
+    token: 'live_2361ad8192506b03ec7b58407db'
+  });
 </script>
 
 </body>
