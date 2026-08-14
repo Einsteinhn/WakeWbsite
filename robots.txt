@@ -1,4 +1,14 @@
 User-agent: *
 Allow: /
 
+# Asistentes de IA: contexto del sitio en llms.txt
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
 Sitemap: https://wake.solutions/sitemap.xml

@@ -1,41 +1,138 @@
 # WAKE SOLUTIONS
 
-> Technology infrastructure and clinic software (WAKE Health) for businesses and medical practices across Honduras, Latin America, and the United States.
+> Infraestructura tecnológica y software clínico (WAKE HEALTH) para empresas y clínicas en Honduras, Latinoamérica, España y Estados Unidos.
 
-WAKE SOLUTIONS builds operational technology: automation, systematization, and software. WAKE Health is the clinic management product (patients, scheduling, clinical records, billing).
+WAKE SOLUTIONS construye tecnología operativa: automatización, sistematización e integración de IA. WAKE HEALTH es el producto de gestión clínica (pacientes, citas, expediente clínico, facturación, laboratorio y diagnóstico asistido por IA).
 
-## Primary pages
+## Datos clave
 
-- [Home (ES)](https://wake.solutions/): Corporate site in Spanish
-- [Home (EN)](https://wake.solutions/en): Corporate site in English
-- [WAKE Health (ES)](https://wake.solutions/health): Clinic software product page
-- [WAKE Health (EN)](https://wake.solutions/en/health): Clinic software product page (EN)
-- [Blog (ES)](https://wake.solutions/blog): Guides on clinic systems and tech solutions
-- [Blog (EN)](https://wake.solutions/en/blog): Same blog in English
-- [Legal (ES)](https://wake.solutions/legal): Terms, privacy, refund policy
-- [Legal (EN)](https://wake.solutions/en/legal): Legal policies in English
+- Precio de WAKE HEALTH: $24.99 USD al mes, plan único con todos los módulos incluidos.
+- Prueba gratuita: 3 días. No hay reembolsos; la prueba sustituye el período de garantía.
+- Idiomas: español (por defecto) e inglés bajo /en.
+- Cobertura: 19 países/regiones en español y 19 estados en Estados Unidos, con 304 páginas de ciudad.
 
-## Comparisons
+## Páginas principales
 
-- [WAKE Health vs Excel (ES)](https://wake.solutions/comparar/wake-health-vs-excel)
-- [WAKE Health vs Excel (EN)](https://wake.solutions/en/compare/wake-health-vs-excel)
-- [WAKE Health vs paper (ES)](https://wake.solutions/comparar/wake-health-vs-paper)
-- [WAKE Health vs paper (EN)](https://wake.solutions/en/compare/wake-health-vs-paper)
+- [Inicio (ES)](https://wake.solutions/) · [Home (EN)](https://wake.solutions/en)
+- [WAKE Health (ES)](https://wake.solutions/health) · [WAKE Health (EN)](https://wake.solutions/en/health)
+- [Cobertura (ES)](https://wake.solutions/cobertura) · [Coverage (EN)](https://wake.solutions/en/coverage)
+- [Blog (ES)](https://wake.solutions/blog) · [Blog (EN)](https://wake.solutions/en/blog)
+- [Legal y términos (ES)](https://wake.solutions/legal) · [Legal (EN)](https://wake.solutions/en/legal)
 
-## Blog posts
+## Hubs
 
-- [Clinic system / operational order (ES)](https://wake.solutions/blog/sistema-para-clinicas-orden-operativo)
-- [Clinic system / operational order (EN)](https://wake.solutions/en/blog/sistema-para-clinicas-orden-operativo)
-- [Tech solutions for businesses & clinics (ES)](https://wake.solutions/blog/soluciones-tecnologicas-empresas-clinicas)
-- [Tech solutions for businesses & clinics (EN)](https://wake.solutions/en/blog/soluciones-tecnologicas-empresas-clinicas)
+- [Especialidades médicas](https://wake.solutions/especialidades) · [Specialties](https://wake.solutions/en/specialties)
+- [Funciones del sistema](https://wake.solutions/funciones) · [Features](https://wake.solutions/en/features)
+- [Soluciones por sector](https://wake.solutions/soluciones) · [Industries](https://wake.solutions/en/solutions)
 
-## Contact
+## Especialidades médicas
 
-- Website: https://wake.solutions
-- Email: ventas@wake.solutions
+- [Pediatría](https://wake.solutions/especialidades/pediatria) · [EN](https://wake.solutions/en/specialties/pediatria)
+- [Dermatología](https://wake.solutions/especialidades/dermatologia) · [EN](https://wake.solutions/en/specialties/dermatologia)
+- [Odontología](https://wake.solutions/especialidades/odontologia) · [EN](https://wake.solutions/en/specialties/odontologia)
+- [Ginecología y Obstetricia](https://wake.solutions/especialidades/ginecologia) · [EN](https://wake.solutions/en/specialties/ginecologia)
+- [Psicología y Salud Mental](https://wake.solutions/especialidades/psicologia) · [EN](https://wake.solutions/en/specialties/psicologia)
+- [Nutrición](https://wake.solutions/especialidades/nutricion) · [EN](https://wake.solutions/en/specialties/nutricion)
+- [Oftalmología](https://wake.solutions/especialidades/oftalmologia) · [EN](https://wake.solutions/en/specialties/oftalmologia)
+- [Cardiología](https://wake.solutions/especialidades/cardiologia) · [EN](https://wake.solutions/en/specialties/cardiologia)
+- [Fisioterapia y Rehabilitación](https://wake.solutions/especialidades/fisioterapia) · [EN](https://wake.solutions/en/specialties/fisioterapia)
+- [Medicina General](https://wake.solutions/especialidades/medicina-general) · [EN](https://wake.solutions/en/specialties/medicina-general)
+- [Laboratorio Clínico](https://wake.solutions/especialidades/laboratorio-clinico) · [EN](https://wake.solutions/en/specialties/laboratorio-clinico)
+- [Clínica Estética](https://wake.solutions/especialidades/clinica-estetica) · [EN](https://wake.solutions/en/specialties/clinica-estetica)
+- [Veterinaria](https://wake.solutions/especialidades/veterinaria) · [EN](https://wake.solutions/en/specialties/veterinaria)
+- [Ortopedia y Traumatología](https://wake.solutions/especialidades/ortopedia) · [EN](https://wake.solutions/en/specialties/ortopedia)
+- [Otorrinolaringología](https://wake.solutions/especialidades/otorrinolaringologia) · [EN](https://wake.solutions/en/specialties/otorrinolaringologia)
+- [Urología](https://wake.solutions/especialidades/urologia) · [EN](https://wake.solutions/en/specialties/urologia)
+
+## Funciones de WAKE HEALTH
+
+- [Expediente Clínico Electrónico](https://wake.solutions/funciones/expediente-clinico-electronico) · [EN](https://wake.solutions/en/features/expediente-clinico-electronico)
+- [Agenda Médica](https://wake.solutions/funciones/agenda-medica) · [EN](https://wake.solutions/en/features/agenda-medica)
+- [Recetas Digitales](https://wake.solutions/funciones/recetas-digitales) · [EN](https://wake.solutions/en/features/recetas-digitales)
+- [Facturación Médica y Caja](https://wake.solutions/funciones/facturacion-medica) · [EN](https://wake.solutions/en/features/facturacion-medica)
+- [Diagnóstico Asistido con IA](https://wake.solutions/funciones/diagnostico-con-ia) · [EN](https://wake.solutions/en/features/diagnostico-con-ia)
+- [Módulo de Laboratorio](https://wake.solutions/funciones/modulo-de-laboratorio) · [EN](https://wake.solutions/en/features/modulo-de-laboratorio)
+- [Farmacia e Inventario](https://wake.solutions/funciones/farmacia-e-inventario) · [EN](https://wake.solutions/en/features/farmacia-e-inventario)
+- [Reportes y Analítica](https://wake.solutions/funciones/reportes-y-analitica) · [EN](https://wake.solutions/en/features/reportes-y-analitica)
+- [Atención Directa de Emergencias](https://wake.solutions/funciones/atencion-de-emergencias) · [EN](https://wake.solutions/en/features/atencion-de-emergencias)
+- [Multi-sucursal](https://wake.solutions/funciones/multisucursal) · [EN](https://wake.solutions/en/features/multisucursal)
+- [Acceso Móvil y Multidispositivo](https://wake.solutions/funciones/acceso-movil) · [EN](https://wake.solutions/en/features/acceso-movil)
+- [Respaldos y Seguridad](https://wake.solutions/funciones/respaldos-y-seguridad) · [EN](https://wake.solutions/en/features/respaldos-y-seguridad)
+
+## Sectores atendidos
+
+- [Clínicas y Centros Médicos](https://wake.solutions/soluciones/clinicas-y-centros-medicos) · [EN](https://wake.solutions/en/solutions/clinicas-y-centros-medicos)
+- [Retail y Comercio](https://wake.solutions/soluciones/retail-y-comercio) · [EN](https://wake.solutions/en/solutions/retail-y-comercio)
+- [Restaurantes](https://wake.solutions/soluciones/restaurantes) · [EN](https://wake.solutions/en/solutions/restaurantes)
+- [Logística y Distribución](https://wake.solutions/soluciones/logistica-y-distribucion) · [EN](https://wake.solutions/en/solutions/logistica-y-distribucion)
+- [Servicios Profesionales](https://wake.solutions/soluciones/servicios-profesionales) · [EN](https://wake.solutions/en/solutions/servicios-profesionales)
+- [Manufactura](https://wake.solutions/soluciones/manufactura) · [EN](https://wake.solutions/en/solutions/manufactura)
+- [Educación](https://wake.solutions/soluciones/educacion) · [EN](https://wake.solutions/en/solutions/educacion)
+- [Inmobiliaria](https://wake.solutions/soluciones/inmobiliaria) · [EN](https://wake.solutions/en/solutions/inmobiliaria)
+- [Farmacias](https://wake.solutions/soluciones/farmacias) · [EN](https://wake.solutions/en/solutions/farmacias)
+- [Hoteles y Turismo](https://wake.solutions/soluciones/hoteles-y-turismo) · [EN](https://wake.solutions/en/solutions/hoteles-y-turismo)
+
+## Países y regiones (ES)
+
+- [Honduras](https://wake.solutions/honduras) · [clínicas](https://wake.solutions/health/honduras)
+- [Guatemala](https://wake.solutions/guatemala) · [clínicas](https://wake.solutions/health/guatemala)
+- [El Salvador](https://wake.solutions/el-salvador) · [clínicas](https://wake.solutions/health/el-salvador)
+- [Costa Rica](https://wake.solutions/costa-rica) · [clínicas](https://wake.solutions/health/costa-rica)
+- [Panamá](https://wake.solutions/panama) · [clínicas](https://wake.solutions/health/panama)
+- [México](https://wake.solutions/mexico) · [clínicas](https://wake.solutions/health/mexico)
+- [Colombia](https://wake.solutions/colombia) · [clínicas](https://wake.solutions/health/colombia)
+- [Perú](https://wake.solutions/peru) · [clínicas](https://wake.solutions/health/peru)
+- [República Dominicana](https://wake.solutions/republica-dominicana) · [clínicas](https://wake.solutions/health/republica-dominicana)
+- [Ecuador](https://wake.solutions/ecuador) · [clínicas](https://wake.solutions/health/ecuador)
+- [Chile](https://wake.solutions/chile) · [clínicas](https://wake.solutions/health/chile)
+- [Argentina](https://wake.solutions/argentina) · [clínicas](https://wake.solutions/health/argentina)
+- [Nicaragua](https://wake.solutions/nicaragua) · [clínicas](https://wake.solutions/health/nicaragua)
+- [Bolivia](https://wake.solutions/bolivia) · [clínicas](https://wake.solutions/health/bolivia)
+- [Paraguay](https://wake.solutions/paraguay) · [clínicas](https://wake.solutions/health/paraguay)
+- [Uruguay](https://wake.solutions/uruguay) · [clínicas](https://wake.solutions/health/uruguay)
+- [Puerto Rico](https://wake.solutions/puerto-rico) · [clínicas](https://wake.solutions/health/puerto-rico)
+- [Venezuela](https://wake.solutions/venezuela) · [clínicas](https://wake.solutions/health/venezuela)
+- [España](https://wake.solutions/espana) · [clínicas](https://wake.solutions/health/espana)
+
+## Estados (EN)
+
+- [Texas](https://wake.solutions/en/texas) · [clinics](https://wake.solutions/en/health/texas)
+- [California](https://wake.solutions/en/california) · [clinics](https://wake.solutions/en/health/california)
+- [Florida](https://wake.solutions/en/florida) · [clinics](https://wake.solutions/en/health/florida)
+- [New York](https://wake.solutions/en/new-york) · [clinics](https://wake.solutions/en/health/new-york)
+- [Illinois](https://wake.solutions/en/illinois) · [clinics](https://wake.solutions/en/health/illinois)
+- [Arizona](https://wake.solutions/en/arizona) · [clinics](https://wake.solutions/en/health/arizona)
+- [Georgia](https://wake.solutions/en/georgia) · [clinics](https://wake.solutions/en/health/georgia)
+- [North Carolina](https://wake.solutions/en/north-carolina) · [clinics](https://wake.solutions/en/health/north-carolina)
+- [New Jersey](https://wake.solutions/en/new-jersey) · [clinics](https://wake.solutions/en/health/new-jersey)
+- [Washington](https://wake.solutions/en/washington) · [clinics](https://wake.solutions/en/health/washington)
+- [Nevada](https://wake.solutions/en/nevada) · [clinics](https://wake.solutions/en/health/nevada)
+- [Colorado](https://wake.solutions/en/colorado) · [clinics](https://wake.solutions/en/health/colorado)
+- [Pennsylvania](https://wake.solutions/en/pennsylvania) · [clinics](https://wake.solutions/en/health/pennsylvania)
+- [Massachusetts](https://wake.solutions/en/massachusetts) · [clinics](https://wake.solutions/en/health/massachusetts)
+- [Ohio](https://wake.solutions/en/ohio) · [clinics](https://wake.solutions/en/health/ohio)
+- [Michigan](https://wake.solutions/en/michigan) · [clinics](https://wake.solutions/en/health/michigan)
+- [Tennessee](https://wake.solutions/en/tennessee) · [clinics](https://wake.solutions/en/health/tennessee)
+- [Virginia](https://wake.solutions/en/virginia) · [clinics](https://wake.solutions/en/health/virginia)
+- [Maryland](https://wake.solutions/en/maryland) · [clinics](https://wake.solutions/en/health/maryland)
+
+## Blog
+
+- [Cómo un sistema para clínicas mejora el orden operativo en Latinoamérica y USA](https://wake.solutions/blog/sistema-para-clinicas-orden-operativo) · [EN](https://wake.solutions/en/blog/sistema-para-clinicas-orden-operativo)
+- [Soluciones tecnológicas para empresas y clínicas: de la automatización al control](https://wake.solutions/blog/soluciones-tecnologicas-empresas-clinicas) · [EN](https://wake.solutions/en/blog/soluciones-tecnologicas-empresas-clinicas)
+
+## Comparaciones
+
+- [WAKE Health vs Excel | Sistema para clínicas vs hojas de cálculo](https://wake.solutions/comparar/wake-health-vs-excel) · [EN](https://wake.solutions/en/compare/wake-health-vs-excel)
+- [WAKE Health vs papel | Digitalizar la clínica sin perder control](https://wake.solutions/comparar/wake-health-vs-paper) · [EN](https://wake.solutions/en/compare/wake-health-vs-paper)
+
+## Contacto
+
+- Sitio web: https://wake.solutions
+- Correo: ventas@wake.solutions
 - WhatsApp: +504 3329-2869
 
-## Optional
+## Opcional
 
 - [Sitemap](https://wake.solutions/sitemap.xml)
 - [robots.txt](https://wake.solutions/robots.txt)
